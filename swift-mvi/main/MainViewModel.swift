@@ -1,16 +1,35 @@
 import Foundation
-
 import RxSwift
 
 class MainViewModel : MviViewModel<MainViewIntent, MainResult, MainViewState> {
- 
+    
+    let fetchAndSavePinyin = FetchAndSavePinyin()
+    let countPinyin = CountPinyin()
+    
+    private func fetch() -> Observable<MainResult> {
+        
+        return countPinyin
+            .count()
+            .flatMap { count in
+                if count > 0 {
+                    return Single.just(MainResult.OnPinyinLoaded)
+                } else {
+                    return self.fetchAndSavePinyin
+                        .save()
+                        .map { _ in MainResult.OnPinyinLoaded }
+                }
+            }
+            .catchErrorJustReturn(MainResult.GenericError)
+            .asObservable()
+            .startWith(MainResult.InProgress)
+    }
+    
     override func dispatcher(intent: MainViewIntent) -> Observable<MainResult> {
         switch intent {
-        case .Init(let userId):
-            print(userId)
-            return Observable.just(MainResult.InProgress)
-        case .LoadPinyin:
-            return Observable.just(MainResult.GenericError("error message"))
+        case .Init:
+            return fetch()
+        case .Retry:
+            return fetch()
         }
     }
     
@@ -18,10 +37,10 @@ class MainViewModel : MviViewModel<MainViewIntent, MainResult, MainViewState> {
         switch result {
         case .InProgress:
             return MainViewState.InProgress
-        case .Pinyin:
-            return MainViewState.Pinyin
-        case .GenericError(let error):
-            return MainViewState.GenericError(error: error)
+        case .OnPinyinLoaded:
+            return MainViewState.OnPinyinLoaded
+        case .GenericError:
+            return MainViewState.GenericError
         }
     }
 }

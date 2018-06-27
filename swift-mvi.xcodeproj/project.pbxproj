@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C7273C920E2B74E00FC69DA /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7273C820E2B74E00FC69DA /* View.swift */; };
+		3C73012120E37A3200C139BA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C73011F20E37A3100C139BA /* RealmSwift.framework */; };
+		3C73012220E37A3200C139BA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C73012020E37A3100C139BA /* Realm.framework */; };
+		3CC08B8220E2A4DF00C32823 /* RxHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC08B8120E2A4DF00C32823 /* RxHttp.swift */; };
+		3CC08B8420E2A59600C32823 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC08B8320E2A59600C32823 /* Logger.swift */; };
+		3CC08B8620E2A8F400C32823 /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC08B8520E2A8F400C32823 /* HttpResponse.swift */; };
+		3CC08B8820E2AA1D00C32823 /* HttpErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC08B8720E2AA1D00C32823 /* HttpErrorResponse.swift */; };
+		3CC08B8C20E2ABB800C32823 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC08B8920E2ABB800C32823 /* Alamofire.framework */; };
+		3CC08B8D20E2ABB800C32823 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC08B8A20E2ABB800C32823 /* ObjectMapper.framework */; };
+		3CC08B8E20E2ABB800C32823 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC08B8B20E2ABB800C32823 /* SwiftyJSON.framework */; };
+		3CC08B9120E2AE8200C32823 /* PinyinApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC08B9020E2AE8200C32823 /* PinyinApi.swift */; };
+		3CC08B9320E2AECD00C32823 /* PinyinWrapperJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC08B9220E2AECD00C32823 /* PinyinWrapperJson.swift */; };
+		3CC08B9520E2AF1500C32823 /* PinyinJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC08B9420E2AF1500C32823 /* PinyinJson.swift */; };
+		3CC08B9720E2B10C00C32823 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC08B9620E2B10C00C32823 /* ApiConfig.swift */; };
+		3CC08B9A20E2B1F100C32823 /* FetchAndSavePinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC08B9920E2B1F100C32823 /* FetchAndSavePinyin.swift */; };
+		3CC08B9C20E2B25600C32823 /* Pinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC08B9B20E2B25600C32823 /* Pinyin.swift */; };
 		3CCBF18920DD027200056A8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF18820DD027200056A8F /* AppDelegate.swift */; };
 		3CCBF18B20DD027200056A8F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF18A20DD027200056A8F /* MainViewController.swift */; };
 		3CCBF18E20DD027200056A8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCBF18C20DD027200056A8F /* Main.storyboard */; };
@@ -48,6 +64,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C7273C820E2B74E00FC69DA /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		3C73011F20E37A3100C139BA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		3C73012020E37A3100C139BA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		3CC08B8120E2A4DF00C32823 /* RxHttp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxHttp.swift; sourceTree = "<group>"; };
+		3CC08B8320E2A59600C32823 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		3CC08B8520E2A8F400C32823 /* HttpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
+		3CC08B8720E2AA1D00C32823 /* HttpErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpErrorResponse.swift; sourceTree = "<group>"; };
+		3CC08B8920E2ABB800C32823 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		3CC08B8A20E2ABB800C32823 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		3CC08B8B20E2ABB800C32823 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		3CC08B9020E2AE8200C32823 /* PinyinApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinApi.swift; sourceTree = "<group>"; };
+		3CC08B9220E2AECD00C32823 /* PinyinWrapperJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinWrapperJson.swift; sourceTree = "<group>"; };
+		3CC08B9420E2AF1500C32823 /* PinyinJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinJson.swift; sourceTree = "<group>"; };
+		3CC08B9620E2B10C00C32823 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		3CC08B9920E2B1F100C32823 /* FetchAndSavePinyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAndSavePinyin.swift; sourceTree = "<group>"; };
+		3CC08B9B20E2B25600C32823 /* Pinyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pinyin.swift; sourceTree = "<group>"; };
 		3CCBF18520DD027200056A8F /* swift-mvi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-mvi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCBF18820DD027200056A8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CCBF18A20DD027200056A8F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +116,12 @@
 			files = (
 				3CCBF1BB20E0B87700056A8F /* RxSwift.framework in Frameworks */,
 				3CCBF1BD20E0B87700056A8F /* RxCocoa.framework in Frameworks */,
+				3C73012120E37A3200C139BA /* RealmSwift.framework in Frameworks */,
+				3CC08B8E20E2ABB800C32823 /* SwiftyJSON.framework in Frameworks */,
+				3C73012220E37A3200C139BA /* Realm.framework in Frameworks */,
+				3CC08B8D20E2ABB800C32823 /* ObjectMapper.framework in Frameworks */,
 				3CCBF1BE20E0B87700056A8F /* RxBlocking.framework in Frameworks */,
+				3CC08B8C20E2ABB800C32823 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,11 +142,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C15820220E2302D0069FAF1 /* api */ = {
+		3C15820220E2302D0069FAF1 /* network */ = {
 			isa = PBXGroup;
 			children = (
+				3CC08B8120E2A4DF00C32823 /* RxHttp.swift */,
+				3CC08B8320E2A59600C32823 /* Logger.swift */,
+				3CC08B8520E2A8F400C32823 /* HttpResponse.swift */,
+				3CC08B8720E2AA1D00C32823 /* HttpErrorResponse.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		3C73011C20E3786400C139BA /* realm */ = {
+			isa = PBXGroup;
+			children = (
+				3CC08B9B20E2B25600C32823 /* Pinyin.swift */,
+			);
+			path = realm;
+			sourceTree = "<group>";
+		};
+		3CC08B8F20E2AD2200C32823 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				3CC08B9020E2AE8200C32823 /* PinyinApi.swift */,
+				3CC08B9220E2AECD00C32823 /* PinyinWrapperJson.swift */,
+				3CC08B9420E2AF1500C32823 /* PinyinJson.swift */,
+				3CC08B9620E2B10C00C32823 /* ApiConfig.swift */,
 			);
 			path = api;
+			sourceTree = "<group>";
+		};
+		3CC08B9820E2B1DE00C32823 /* usecase */ = {
+			isa = PBXGroup;
+			children = (
+				3C73011C20E3786400C139BA /* realm */,
+				3CC08B8F20E2AD2200C32823 /* api */,
+				3C15820220E2302D0069FAF1 /* network */,
+				3CC08B9920E2B1F100C32823 /* FetchAndSavePinyin.swift */,
+			);
+			path = usecase;
 			sourceTree = "<group>";
 		};
 		3CCBF17C20DD027200056A8F = {
@@ -136,7 +207,7 @@
 		3CCBF18720DD027200056A8F /* swift-mvi */ = {
 			isa = PBXGroup;
 			children = (
-				3C15820220E2302D0069FAF1 /* api */,
+				3CC08B9820E2B1DE00C32823 /* usecase */,
 				3CCBF1D920E0D73E00056A8F /* main */,
 				3CCBF18820DD027200056A8F /* AppDelegate.swift */,
 				3CCBF18F20DD027300056A8F /* Assets.xcassets */,
@@ -149,6 +220,7 @@
 				3CCBF1C920E0BD8E00056A8F /* MviResult.swift */,
 				3CCBF1CB20E0BDA400056A8F /* MviViewState.swift */,
 				3CCBF1D720E0CCBB00056A8F /* Rx.swift */,
+				3C7273C820E2B74E00FC69DA /* View.swift */,
 			);
 			path = "swift-mvi";
 			sourceTree = "<group>";
@@ -174,6 +246,11 @@
 		3CCBF1B620E0B87700056A8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C73012020E37A3100C139BA /* Realm.framework */,
+				3C73011F20E37A3100C139BA /* RealmSwift.framework */,
+				3CC08B8920E2ABB800C32823 /* Alamofire.framework */,
+				3CC08B8A20E2ABB800C32823 /* ObjectMapper.framework */,
+				3CC08B8B20E2ABB800C32823 /* SwiftyJSON.framework */,
 				3CCBF1BA20E0B87700056A8F /* RxBlocking.framework */,
 				3CCBF1B920E0B87700056A8F /* RxCocoa.framework */,
 				3CCBF1B720E0B87700056A8F /* RxSwift.framework */,
@@ -332,11 +409,21 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxBlocking.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyJSON.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Realm.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -367,14 +454,25 @@
 				3CCBF18B20DD027200056A8F /* MainViewController.swift in Sources */,
 				3CCBF1DD20E0D83300056A8F /* MviView.swift in Sources */,
 				3CCBF1D620E0C7C600056A8F /* MainViewState.swift in Sources */,
+				3CC08B9720E2B10C00C32823 /* ApiConfig.swift in Sources */,
 				3CCBF1CC20E0BDA400056A8F /* MviViewState.swift in Sources */,
+				3CC08B9520E2AF1500C32823 /* PinyinJson.swift in Sources */,
+				3C7273C920E2B74E00FC69DA /* View.swift in Sources */,
 				3CCBF1D820E0CCBB00056A8F /* Rx.swift in Sources */,
+				3CC08B9120E2AE8200C32823 /* PinyinApi.swift in Sources */,
+				3CC08B8220E2A4DF00C32823 /* RxHttp.swift in Sources */,
+				3CC08B8620E2A8F400C32823 /* HttpResponse.swift in Sources */,
 				3CCBF1CA20E0BD8E00056A8F /* MviResult.swift in Sources */,
 				3CCBF1C620E0BD4E00056A8F /* MviViewModel.swift in Sources */,
+				3CC08B8820E2AA1D00C32823 /* HttpErrorResponse.swift in Sources */,
+				3CC08B8420E2A59600C32823 /* Logger.swift in Sources */,
+				3CC08B9A20E2B1F100C32823 /* FetchAndSavePinyin.swift in Sources */,
 				3CCBF18920DD027200056A8F /* AppDelegate.swift in Sources */,
 				3CCBF1C820E0BD7100056A8F /* MviIntent.swift in Sources */,
 				3CCBF1C420E0BD2B00056A8F /* MviViewController.swift in Sources */,
+				3CC08B9320E2AECD00C32823 /* PinyinWrapperJson.swift in Sources */,
 				3CCBF1D420E0C7A700056A8F /* MainResult.swift in Sources */,
+				3CC08B9C20E2B25600C32823 /* Pinyin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

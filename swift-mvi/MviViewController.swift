@@ -1,5 +1,4 @@
 import UIKit
-
 import RxSwift
 
 class MviViewController<I : MviIntent, R: MviResult, VS: MviViewState, VM : MviViewModel<I, R, VS>>: UIViewController {

@@ -18,22 +18,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRo-mP-cvV">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zFE-F8-xiX">
+                                <rect key="frame" x="16" y="301" width="343" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, we could not fetch the Pinyin dictionary." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5z-hQ-vmB">
+                                        <rect key="frame" x="34.5" y="0.0" width="274.5" height="42.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRo-mP-cvV">
+                                        <rect key="frame" x="153" y="42.5" width="37" height="42.5"/>
+                                        <state key="normal" title="Retry"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bHK-GR-hsN">
+                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tRo-mP-cvV" secondAttribute="trailing" constant="165" id="Dma-6b-NFV"/>
-                            <constraint firstItem="tRo-mP-cvV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="298" id="Fod-yV-NGp"/>
-                            <constraint firstItem="tRo-mP-cvV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="jiA-ca-jB8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tRo-mP-cvV" secondAttribute="bottom" constant="319" id="xvo-uP-HY6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zFE-F8-xiX" secondAttribute="trailing" constant="16" id="90d-UB-zTE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bHK-GR-hsN" secondAttribute="bottom" constant="16" id="BGW-F5-I3M"/>
+                            <constraint firstItem="zFE-F8-xiX" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="C7p-G7-Yq7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bHK-GR-hsN" secondAttribute="trailing" constant="16" id="X6J-61-V00"/>
+                            <constraint firstItem="bHK-GR-hsN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Zjx-WS-gAq"/>
+                            <constraint firstItem="zFE-F8-xiX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="a7j-n8-8Po"/>
+                            <constraint firstItem="bHK-GR-hsN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vi4-lT-1ie"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="buttonOne" destination="tRo-mP-cvV" id="1nV-aA-koP"/>
+                        <outlet property="activityIndicatorView" destination="bHK-GR-hsN" id="dfA-fB-B5o"/>
+                        <outlet property="errorContainer" destination="zFE-F8-xiX" id="4eC-0q-Yo8"/>
+                        <outlet property="retryButton" destination="tRo-mP-cvV" id="1nV-aA-koP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
