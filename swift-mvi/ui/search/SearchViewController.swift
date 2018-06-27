@@ -6,6 +6,7 @@ class SearchViewController: MviViewController<SearchIntent, SearchResult, Search
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var rootView: UIView!
     
     override func intents() -> Observable<SearchIntent> {
         return Observable.merge(

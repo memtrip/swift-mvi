@@ -16,6 +16,17 @@
 		3CAF731320E41E2200C63759 /* SearchViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF731220E41E2200C63759 /* SearchViewState.swift */; };
 		3CAF731520E41E2C00C63759 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF731420E41E2C00C63759 /* SearchResult.swift */; };
 		3CAF731720E4255D00C63759 /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF731620E4255D00C63759 /* SearchPage.swift */; };
+		3CBF3D9D20E42DE400F19354 /* PinyinListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3D9C20E42DE400F19354 /* PinyinListViewController.swift */; };
+		3CBF3D9F20E42DF300F19354 /* PinyinListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3D9E20E42DF300F19354 /* PinyinListViewModel.swift */; };
+		3CBF3DA120E42DFD00F19354 /* PinyinListIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3DA020E42DFD00F19354 /* PinyinListIntent.swift */; };
+		3CBF3DA320E42E0D00F19354 /* PinyinListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3DA220E42E0D00F19354 /* PinyinListViewState.swift */; };
+		3CBF3DA520E42E1C00F19354 /* PinyinListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3DA420E42E1C00F19354 /* PinyinListResult.swift */; };
+		3CBF3DA820E4349200F19354 /* PhoneticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3DA720E4349200F19354 /* PhoneticViewController.swift */; };
+		3CBF3DAA20E4349C00F19354 /* PhoneticViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3DA920E4349C00F19354 /* PhoneticViewModel.swift */; };
+		3CBF3DAD20E434AD00F19354 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3DAC20E434AD00F19354 /* CharacterViewController.swift */; };
+		3CBF3DAF20E434B500F19354 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3DAE20E434B500F19354 /* CharacterViewModel.swift */; };
+		3CBF3DB220E434C900F19354 /* EnglishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3DB120E434C900F19354 /* EnglishViewController.swift */; };
+		3CBF3DB420E434D200F19354 /* EnglishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3DB320E434D200F19354 /* EnglishViewModel.swift */; };
 		3CC08B8220E2A4DF00C32823 /* RxHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC08B8120E2A4DF00C32823 /* RxHttp.swift */; };
 		3CC08B8420E2A59600C32823 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC08B8320E2A59600C32823 /* Logger.swift */; };
 		3CC08B8620E2A8F400C32823 /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC08B8520E2A8F400C32823 /* HttpResponse.swift */; };
@@ -78,6 +89,17 @@
 		3CAF731220E41E2200C63759 /* SearchViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewState.swift; sourceTree = "<group>"; };
 		3CAF731420E41E2C00C63759 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		3CAF731620E4255D00C63759 /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
+		3CBF3D9C20E42DE400F19354 /* PinyinListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinListViewController.swift; sourceTree = "<group>"; };
+		3CBF3D9E20E42DF300F19354 /* PinyinListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinListViewModel.swift; sourceTree = "<group>"; };
+		3CBF3DA020E42DFD00F19354 /* PinyinListIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinListIntent.swift; sourceTree = "<group>"; };
+		3CBF3DA220E42E0D00F19354 /* PinyinListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinListViewState.swift; sourceTree = "<group>"; };
+		3CBF3DA420E42E1C00F19354 /* PinyinListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinListResult.swift; sourceTree = "<group>"; };
+		3CBF3DA720E4349200F19354 /* PhoneticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneticViewController.swift; sourceTree = "<group>"; };
+		3CBF3DA920E4349C00F19354 /* PhoneticViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneticViewModel.swift; sourceTree = "<group>"; };
+		3CBF3DAC20E434AD00F19354 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		3CBF3DAE20E434B500F19354 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
+		3CBF3DB120E434C900F19354 /* EnglishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishViewController.swift; sourceTree = "<group>"; };
+		3CBF3DB320E434D200F19354 /* EnglishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishViewModel.swift; sourceTree = "<group>"; };
 		3CC08B8120E2A4DF00C32823 /* RxHttp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxHttp.swift; sourceTree = "<group>"; };
 		3CC08B8320E2A59600C32823 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3CC08B8520E2A8F400C32823 /* HttpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
@@ -184,6 +206,7 @@
 		3CAF730A20E41DBB00C63759 /* search */ = {
 			isa = PBXGroup;
 			children = (
+				3CBF3D9B20E42DD300F19354 /* list */,
 				3CAF730C20E41E0400C63759 /* SearchViewController.swift */,
 				3CAF730E20E41E0E00C63759 /* SearchViewModel.swift */,
 				3CAF731020E41E1600C63759 /* SearchIntent.swift */,
@@ -199,6 +222,48 @@
 			children = (
 			);
 			path = detail;
+			sourceTree = "<group>";
+		};
+		3CBF3D9B20E42DD300F19354 /* list */ = {
+			isa = PBXGroup;
+			children = (
+				3CBF3DB020E434B900F19354 /* english */,
+				3CBF3DAB20E4349F00F19354 /* character */,
+				3CBF3DA620E4347300F19354 /* phonetic */,
+				3CBF3D9C20E42DE400F19354 /* PinyinListViewController.swift */,
+				3CBF3D9E20E42DF300F19354 /* PinyinListViewModel.swift */,
+				3CBF3DA020E42DFD00F19354 /* PinyinListIntent.swift */,
+				3CBF3DA220E42E0D00F19354 /* PinyinListViewState.swift */,
+				3CBF3DA420E42E1C00F19354 /* PinyinListResult.swift */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		3CBF3DA620E4347300F19354 /* phonetic */ = {
+			isa = PBXGroup;
+			children = (
+				3CBF3DA720E4349200F19354 /* PhoneticViewController.swift */,
+				3CBF3DA920E4349C00F19354 /* PhoneticViewModel.swift */,
+			);
+			path = phonetic;
+			sourceTree = "<group>";
+		};
+		3CBF3DAB20E4349F00F19354 /* character */ = {
+			isa = PBXGroup;
+			children = (
+				3CBF3DAC20E434AD00F19354 /* CharacterViewController.swift */,
+				3CBF3DAE20E434B500F19354 /* CharacterViewModel.swift */,
+			);
+			path = character;
+			sourceTree = "<group>";
+		};
+		3CBF3DB020E434B900F19354 /* english */ = {
+			isa = PBXGroup;
+			children = (
+				3CBF3DB120E434C900F19354 /* EnglishViewController.swift */,
+				3CBF3DB320E434D200F19354 /* EnglishViewModel.swift */,
+			);
+			path = english;
 			sourceTree = "<group>";
 		};
 		3CC08B8F20E2AD2200C32823 /* api */ = {
@@ -494,9 +559,15 @@
 				3CCBF1D620E0C7C600056A8F /* EntryViewState.swift in Sources */,
 				3CC08B9720E2B10C00C32823 /* ApiConfig.swift in Sources */,
 				3CCBF1CC20E0BDA400056A8F /* MviViewState.swift in Sources */,
+				3CBF3DB220E434C900F19354 /* EnglishViewController.swift in Sources */,
+				3CBF3DB420E434D200F19354 /* EnglishViewModel.swift in Sources */,
 				3CC08B9520E2AF1500C32823 /* PinyinJson.swift in Sources */,
+				3CBF3DA520E42E1C00F19354 /* PinyinListResult.swift in Sources */,
 				3C7273C920E2B74E00FC69DA /* View.swift in Sources */,
 				3CCBF1D820E0CCBB00056A8F /* Rx.swift in Sources */,
+				3CBF3DAF20E434B500F19354 /* CharacterViewModel.swift in Sources */,
+				3CBF3D9D20E42DE400F19354 /* PinyinListViewController.swift in Sources */,
+				3CBF3DAD20E434AD00F19354 /* CharacterViewController.swift in Sources */,
 				3CC08B9120E2AE8200C32823 /* PinyinApi.swift in Sources */,
 				3CC08B8220E2A4DF00C32823 /* RxHttp.swift in Sources */,
 				3CC08B8620E2A8F400C32823 /* HttpResponse.swift in Sources */,
@@ -509,12 +580,17 @@
 				3CAF731720E4255D00C63759 /* SearchPage.swift in Sources */,
 				3CAF731120E41E1600C63759 /* SearchIntent.swift in Sources */,
 				3CAF731520E41E2C00C63759 /* SearchResult.swift in Sources */,
+				3CBF3DA120E42DFD00F19354 /* PinyinListIntent.swift in Sources */,
 				3CAF730F20E41E0E00C63759 /* SearchViewModel.swift in Sources */,
 				3CC08B9A20E2B1F100C32823 /* FetchAndSavePinyin.swift in Sources */,
 				3CCBF18920DD027200056A8F /* AppDelegate.swift in Sources */,
 				3CCBF1C820E0BD7100056A8F /* MviIntent.swift in Sources */,
+				3CBF3D9F20E42DF300F19354 /* PinyinListViewModel.swift in Sources */,
+				3CBF3DA320E42E0D00F19354 /* PinyinListViewState.swift in Sources */,
 				3CCBF1C420E0BD2B00056A8F /* MviViewController.swift in Sources */,
 				3CC08B9320E2AECD00C32823 /* PinyinWrapperJson.swift in Sources */,
+				3CBF3DAA20E4349C00F19354 /* PhoneticViewModel.swift in Sources */,
+				3CBF3DA820E4349200F19354 /* PhoneticViewController.swift in Sources */,
 				3CCBF1D420E0C7A700056A8F /* EntryResult.swift in Sources */,
 				3CC08B9C20E2B25600C32823 /* Pinyin.swift in Sources */,
 			);

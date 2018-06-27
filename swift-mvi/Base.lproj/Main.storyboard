@@ -80,19 +80,28 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNb-2J-iBf">
+                                <rect key="frame" x="0.0" y="136" width="375" height="531"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="qNb-2J-iBf" firstAttribute="top" secondItem="gsr-tn-b5v" secondAttribute="bottom" constant="16" id="DnC-f4-4lc"/>
                             <constraint firstItem="gsr-tn-b5v" firstAttribute="top" secondItem="36L-UW-2TX" secondAttribute="bottom" constant="16" id="ErU-nC-5sp"/>
                             <constraint firstItem="gsr-tn-b5v" firstAttribute="leading" secondItem="s7K-CZ-CNu" secondAttribute="leading" constant="16" id="K91-YI-FtB"/>
                             <constraint firstItem="s7K-CZ-CNu" firstAttribute="trailing" secondItem="36L-UW-2TX" secondAttribute="trailing" id="Ntv-7g-jy2"/>
                             <constraint firstItem="s7K-CZ-CNu" firstAttribute="trailing" secondItem="gsr-tn-b5v" secondAttribute="trailing" constant="16" id="Ol1-bz-IfA"/>
+                            <constraint firstItem="s7K-CZ-CNu" firstAttribute="trailing" secondItem="qNb-2J-iBf" secondAttribute="trailing" id="Vlu-Sq-l8k"/>
+                            <constraint firstItem="s7K-CZ-CNu" firstAttribute="bottom" secondItem="qNb-2J-iBf" secondAttribute="bottom" id="YaL-Yi-idj"/>
                             <constraint firstItem="36L-UW-2TX" firstAttribute="top" secondItem="s7K-CZ-CNu" secondAttribute="top" id="cdG-yW-2iS"/>
                             <constraint firstItem="36L-UW-2TX" firstAttribute="leading" secondItem="s7K-CZ-CNu" secondAttribute="leading" id="giW-sR-GbD"/>
+                            <constraint firstItem="qNb-2J-iBf" firstAttribute="leading" secondItem="s7K-CZ-CNu" secondAttribute="leading" id="uae-Om-bm4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s7K-CZ-CNu"/>
                     </view>
                     <connections>
+                        <outlet property="rootView" destination="qNb-2J-iBf" id="Xyg-Mz-riB"/>
                         <outlet property="searchBar" destination="36L-UW-2TX" id="8wO-wi-opK"/>
                         <outlet property="segmentControl" destination="gsr-tn-b5v" id="Vli-e6-Xwc"/>
                     </connections>
