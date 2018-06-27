@@ -10,6 +10,11 @@
 		3C7273C920E2B74E00FC69DA /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7273C820E2B74E00FC69DA /* View.swift */; };
 		3C73012120E37A3200C139BA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C73011F20E37A3100C139BA /* RealmSwift.framework */; };
 		3C73012220E37A3200C139BA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C73012020E37A3100C139BA /* Realm.framework */; };
+		3C8EE06F20E43C7B0057D8B7 /* PinyinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8EE06E20E43C7B0057D8B7 /* PinyinDetailViewController.swift */; };
+		3C8EE07120E43C820057D8B7 /* PinyinDetailIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8EE07020E43C820057D8B7 /* PinyinDetailIntent.swift */; };
+		3C8EE07320E43C9C0057D8B7 /* PinyinDetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8EE07220E43C9C0057D8B7 /* PinyinDetailResult.swift */; };
+		3C8EE07520E43CA80057D8B7 /* PinyinDetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8EE07420E43CA80057D8B7 /* PinyinDetailViewState.swift */; };
+		3C8EE07720E43CB90057D8B7 /* PinyinDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8EE07620E43CB90057D8B7 /* PinyinDetailViewModel.swift */; };
 		3CAF730D20E41E0400C63759 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF730C20E41E0400C63759 /* SearchViewController.swift */; };
 		3CAF730F20E41E0E00C63759 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF730E20E41E0E00C63759 /* SearchViewModel.swift */; };
 		3CAF731120E41E1600C63759 /* SearchIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF731020E41E1600C63759 /* SearchIntent.swift */; };
@@ -83,6 +88,11 @@
 		3C7273C820E2B74E00FC69DA /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		3C73011F20E37A3100C139BA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		3C73012020E37A3100C139BA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		3C8EE06E20E43C7B0057D8B7 /* PinyinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinDetailViewController.swift; sourceTree = "<group>"; };
+		3C8EE07020E43C820057D8B7 /* PinyinDetailIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinDetailIntent.swift; sourceTree = "<group>"; };
+		3C8EE07220E43C9C0057D8B7 /* PinyinDetailResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinDetailResult.swift; sourceTree = "<group>"; };
+		3C8EE07420E43CA80057D8B7 /* PinyinDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinDetailViewState.swift; sourceTree = "<group>"; };
+		3C8EE07620E43CB90057D8B7 /* PinyinDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinDetailViewModel.swift; sourceTree = "<group>"; };
 		3CAF730C20E41E0400C63759 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3CAF730E20E41E0E00C63759 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		3CAF731020E41E1600C63759 /* SearchIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIntent.swift; sourceTree = "<group>"; };
@@ -193,6 +203,18 @@
 			path = realm;
 			sourceTree = "<group>";
 		};
+		3C8EE06D20E43C6D0057D8B7 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				3C8EE06E20E43C7B0057D8B7 /* PinyinDetailViewController.swift */,
+				3C8EE07020E43C820057D8B7 /* PinyinDetailIntent.swift */,
+				3C8EE07220E43C9C0057D8B7 /* PinyinDetailResult.swift */,
+				3C8EE07420E43CA80057D8B7 /* PinyinDetailViewState.swift */,
+				3C8EE07620E43CB90057D8B7 /* PinyinDetailViewModel.swift */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
 		3CAF730920E41D7700C63759 /* ui */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +228,7 @@
 		3CAF730A20E41DBB00C63759 /* search */ = {
 			isa = PBXGroup;
 			children = (
+				3C8EE06D20E43C6D0057D8B7 /* detail */,
 				3CBF3D9B20E42DD300F19354 /* list */,
 				3CAF730C20E41E0400C63759 /* SearchViewController.swift */,
 				3CAF730E20E41E0E00C63759 /* SearchViewModel.swift */,
@@ -553,6 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8EE07320E43C9C0057D8B7 /* PinyinDetailResult.swift in Sources */,
 				3CCBF1CE20E0BEAC00056A8F /* EntryIntent.swift in Sources */,
 				3CCBF1D020E0C26C00056A8F /* EntryViewModel.swift in Sources */,
 				3CCBF18B20DD027200056A8F /* EntryViewController.swift in Sources */,
@@ -563,6 +587,7 @@
 				3CBF3DB420E434D200F19354 /* EnglishViewModel.swift in Sources */,
 				3CC08B9520E2AF1500C32823 /* PinyinJson.swift in Sources */,
 				3CBF3DA520E42E1C00F19354 /* PinyinListResult.swift in Sources */,
+				3C8EE06F20E43C7B0057D8B7 /* PinyinDetailViewController.swift in Sources */,
 				3C7273C920E2B74E00FC69DA /* View.swift in Sources */,
 				3CCBF1D820E0CCBB00056A8F /* Rx.swift in Sources */,
 				3CBF3DAF20E434B500F19354 /* CharacterViewModel.swift in Sources */,
@@ -571,12 +596,14 @@
 				3CC08B9120E2AE8200C32823 /* PinyinApi.swift in Sources */,
 				3CC08B8220E2A4DF00C32823 /* RxHttp.swift in Sources */,
 				3CC08B8620E2A8F400C32823 /* HttpResponse.swift in Sources */,
+				3C8EE07520E43CA80057D8B7 /* PinyinDetailViewState.swift in Sources */,
 				3CCBF1CA20E0BD8E00056A8F /* MviResult.swift in Sources */,
 				3CAF731320E41E2200C63759 /* SearchViewState.swift in Sources */,
 				3CCBF1C620E0BD4E00056A8F /* MviViewModel.swift in Sources */,
 				3CAF730D20E41E0400C63759 /* SearchViewController.swift in Sources */,
 				3CC08B8820E2AA1D00C32823 /* HttpErrorResponse.swift in Sources */,
 				3CC08B8420E2A59600C32823 /* Logger.swift in Sources */,
+				3C8EE07720E43CB90057D8B7 /* PinyinDetailViewModel.swift in Sources */,
 				3CAF731720E4255D00C63759 /* SearchPage.swift in Sources */,
 				3CAF731120E41E1600C63759 /* SearchIntent.swift in Sources */,
 				3CAF731520E41E2C00C63759 /* SearchResult.swift in Sources */,
@@ -584,6 +611,7 @@
 				3CAF730F20E41E0E00C63759 /* SearchViewModel.swift in Sources */,
 				3CC08B9A20E2B1F100C32823 /* FetchAndSavePinyin.swift in Sources */,
 				3CCBF18920DD027200056A8F /* AppDelegate.swift in Sources */,
+				3C8EE07120E43C820057D8B7 /* PinyinDetailIntent.swift in Sources */,
 				3CCBF1C820E0BD7100056A8F /* MviIntent.swift in Sources */,
 				3CBF3D9F20E42DF300F19354 /* PinyinListViewModel.swift in Sources */,
 				3CBF3DA320E42E0D00F19354 /* PinyinListViewState.swift in Sources */,
