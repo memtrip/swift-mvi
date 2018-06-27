@@ -14,7 +14,9 @@ class MviViewController<I : MviIntent, R: MviResult, VS: MviViewState, VM : MviV
     
     override func viewDidAppear(_ animated: Bool) {
         _ = disposable.insert(viewModel!.states().subscribe(onNext: {
-            state in self.render(state: state)
+            state in
+                print(state)
+                self.render(state: state)
         }))
         viewModel!.processIntents(intents: intents())
     }

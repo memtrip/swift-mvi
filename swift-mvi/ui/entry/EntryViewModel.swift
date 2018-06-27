@@ -1,30 +1,30 @@
 import Foundation
 import RxSwift
 
-class MainViewModel : MviViewModel<MainViewIntent, MainResult, MainViewState> {
+class EntryViewModel : MviViewModel<EntryIntent, EntryResult, EntryViewState> {
     
     let fetchAndSavePinyin = FetchAndSavePinyin()
     let countPinyin = CountPinyin()
     
-    private func fetch() -> Observable<MainResult> {
+    private func fetch() -> Observable<EntryResult> {
         
         return countPinyin
             .count()
             .flatMap { count in
                 if count > 0 {
-                    return Single.just(MainResult.OnPinyinLoaded)
+                    return Single.just(EntryResult.OnPinyinLoaded)
                 } else {
                     return self.fetchAndSavePinyin
                         .save()
-                        .map { _ in MainResult.OnPinyinLoaded }
+                        .map { _ in EntryResult.OnPinyinLoaded }
                 }
             }
-            .catchErrorJustReturn(MainResult.GenericError)
+            .catchErrorJustReturn(EntryResult.GenericError)
             .asObservable()
-            .startWith(MainResult.InProgress)
+            .startWith(EntryResult.InProgress)
     }
     
-    override func dispatcher(intent: MainViewIntent) -> Observable<MainResult> {
+    override func dispatcher(intent: EntryIntent) -> Observable<EntryResult> {
         switch intent {
         case .Init:
             return fetch()
@@ -33,14 +33,14 @@ class MainViewModel : MviViewModel<MainViewIntent, MainResult, MainViewState> {
         }
     }
     
-    override func reducer(previousState: MainViewState, result: MainResult) -> MainViewState {
+    override func reducer(previousState: EntryViewState, result: EntryResult) -> EntryViewState {
         switch result {
         case .InProgress:
-            return MainViewState.InProgress
+            return EntryViewState.InProgress
         case .OnPinyinLoaded:
-            return MainViewState.OnPinyinLoaded
+            return EntryViewState.OnPinyinLoaded
         case .GenericError:
-            return MainViewState.GenericError
+            return EntryViewState.GenericError
         }
     }
 }

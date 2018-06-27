@@ -1,7 +1,7 @@
 import Foundation
 
-enum MainResult : MviResult {
+enum EntryViewState : MviViewState {
     case InProgress
-    case OnPinyinLoaded
     case GenericError
+    case OnPinyinLoaded
 }

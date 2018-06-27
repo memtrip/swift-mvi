@@ -1,6 +1,6 @@
 import Foundation
 
-enum MainViewIntent : MviIntent {
+enum EntryIntent : MviIntent {
     case Init
     case Retry
 }
