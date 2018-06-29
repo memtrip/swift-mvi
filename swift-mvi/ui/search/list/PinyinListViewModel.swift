@@ -3,18 +3,21 @@ import RxSwift
 
 class PinyinListViewModel : MviViewModel<PinyinListIntent, PinyinListResult, PinyinListViewState> {
     
-    func defaultSearchTerm() -> String {
-        fatalError("defaultSearchTerm must be implemented")
-    }
+    let search: PinyinSearch
+    let defaultSearchTerm: String
     
-    func search(terms: String) -> Single<Array<Pinyin>> {
-        fatalError("search must be implemented")
+    init(search: PinyinSearch, defaultSearchTerm: String) {
+        self.search = search
+        self.defaultSearchTerm = defaultSearchTerm
+        super.init(initialState: PinyinListViewState.Populate(pinyinList: []))
     }
     
     override func dispatcher(intent: PinyinListIntent) -> Observable<PinyinListResult> {
         switch intent {
+        case .Idle:
+            return Observable.just(PinyinListResult.Idle)
         case .Search(let terms):
-            return search(terms: terms == "" ? defaultSearchTerm() : terms)
+            return self.search.query(terms: terms == "" ? self.defaultSearchTerm : terms)
                 .map { pinyinList in  PinyinListResult.Populate(pinyinList: pinyinList) }
                 .catchErrorJustReturn(PinyinListResult.OnError)
                 .asObservable()
@@ -27,6 +30,8 @@ class PinyinListViewModel : MviViewModel<PinyinListIntent, PinyinListResult, Pin
     
     override func reducer(previousState: PinyinListViewState, result: PinyinListResult) -> PinyinListViewState {
         switch result {
+        case .Idle:
+            return PinyinListViewState.Idle
         case .Populate(let pinyinList):
             return PinyinListViewState.Populate(pinyinList: pinyinList)
         case .NavigateToDetails(let pinyin):

@@ -1,5 +1,14 @@
 import Foundation
 
-enum PinyinDetailViewState : MviViewState {
+struct PinyinDetailViewState : MviViewState, Copy {
+    var phoneticScriptText: String
+    var englishTranslationText: String
+    var chineseCharacters: String
+    var audioSrc: String?
+    var action: Action
     
+    enum Action {
+        case None
+        case Back
+    }
 }

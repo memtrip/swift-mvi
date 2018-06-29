@@ -4,10 +4,22 @@ import RxSwift
 class PinyinDetailViewModel : MviViewModel<PinyinDetailIntent, PinyinDetailResult, PinyinDetailViewState> {
     
     override func dispatcher(intent: PinyinDetailIntent) -> Observable<PinyinDetailResult> {
-        fatalError("dispatcher must be implemented in concrete implementations of MviViewModel")
+        switch intent {
+        case .Init:
+            return Observable.just(PinyinDetailResult.Init)
+        case .Exit:
+            return Observable.just(PinyinDetailResult.Exit)
+        }
     }
     
     override func reducer(previousState: PinyinDetailViewState, result: PinyinDetailResult) -> PinyinDetailViewState {
-        fatalError("reducer must be implemented in concrete implementations of MviViewModel")
+        switch result {
+        case .Init:
+            return previousState
+        case .Exit:
+            return previousState.copy(copy: {
+                copy in copy.action = PinyinDetailViewState.Action.Back
+            })
+        }
     }
 }

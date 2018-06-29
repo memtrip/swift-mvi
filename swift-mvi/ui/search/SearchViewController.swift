@@ -3,10 +3,26 @@ import RxCocoa
 import RxSwift
 
 class SearchViewController: MviViewController<SearchIntent, SearchResult, SearchViewState, SearchViewModel> {
-    
+ 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var rootView: UIView!
+    
+    private lazy var phoneticViewController: PinyinPhoneticViewController = {
+        return PinyinPhoneticViewController()
+    }()
+    
+    private lazy var englishViewController: PinyinEnglishViewController = {
+        return PinyinEnglishViewController()
+    }()
+    
+    private lazy var characterViewController: PinyinCharacterViewController = {
+        return PinyinCharacterViewController()
+    }()
+    
+    override func idleIntent() -> SearchIntent {
+        return SearchIntent.Idle
+    }
     
     override func intents() -> Observable<SearchIntent> {
         return Observable.merge(
@@ -18,13 +34,29 @@ class SearchViewController: MviViewController<SearchIntent, SearchResult, Search
     }
     
     override func render(state: SearchViewState) {
-        switch state {
-        case  SearchViewState.SearchHint(let hint):
-            searchBar.placeholder = hint
+        searchBar.placeholder = state.hint
+        
+        switch state.page {
+        case .Phonetic:
+            replaceChildViewController(viewController: phoneticViewController)
+        case .English:
+            replaceChildViewController(viewController: englishViewController)
+        case .Character:
+            replaceChildViewController(viewController: characterViewController)
         }
     }
     
+    private func replaceChildViewController(viewController: UIViewController) {
+        addChildViewController(viewController)
+        rootView.addSubview(viewController.view)
+        
+        viewController.view.frame = rootView.bounds
+        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        viewController.didMove(toParentViewController: self)
+    }
+    
     override func provideViewModel() -> SearchViewModel {
-        return SearchViewModel(initialState: SearchViewState.SearchHint(hint: ""))
+        return SearchViewModel(initialState: SearchViewState(hint: "", page: SearchPage.Phonetic))
     }
 }

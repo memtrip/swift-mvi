@@ -15,9 +15,15 @@ class EntryViewController: MviViewController<EntryIntent, EntryResult, EntryView
         )
     }
     
+    override func idleIntent() -> EntryIntent {
+        return EntryIntent.Idle
+    }
+    
     override func render(state: EntryViewState) {        
         switch state {
-        case  EntryViewState.InProgress:
+        case .Idle:
+            break
+        case EntryViewState.InProgress:
             errorContainer.gone()
             activityIndicatorView.visible()
         case  EntryViewState.OnPinyinLoaded:

@@ -1,9 +1,11 @@
 import Foundation
-import ObjectMapper
 
-class HttpResponse: Mappable {
+struct HttpResponse<D: Decodable> {
+    let statusCode: Int
+    let body: D?
     
-    required init?(map: Map) { }
-    
-    func mapping(map: Map) { }
+    init(statusCode: Int, body: D?) {
+        self.statusCode = statusCode
+        self.body = body
+    }
 }

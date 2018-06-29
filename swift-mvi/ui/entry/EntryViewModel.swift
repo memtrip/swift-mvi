@@ -26,6 +26,8 @@ class EntryViewModel : MviViewModel<EntryIntent, EntryResult, EntryViewState> {
     
     override func dispatcher(intent: EntryIntent) -> Observable<EntryResult> {
         switch intent {
+        case .Idle:
+            return Observable.just(EntryResult.Idle)
         case .Init:
             return fetch()
         case .Retry:
@@ -35,6 +37,8 @@ class EntryViewModel : MviViewModel<EntryIntent, EntryResult, EntryViewState> {
     
     override func reducer(previousState: EntryViewState, result: EntryResult) -> EntryViewState {
         switch result {
+        case .Idle:
+            return EntryViewState.Idle
         case .InProgress:
             return EntryViewState.InProgress
         case .OnPinyinLoaded:

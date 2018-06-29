@@ -1,30 +1,43 @@
 import Foundation
 import RxSwift
 
-class PinyinListViewController: MviViewController<PinyinListIntent, PinyinListResult, PinyinListViewState, PinyinListViewModel> {
+class PinyinListViewController<VM : PinyinListViewModel>: MviViewController<PinyinListIntent, PinyinListResult, PinyinListViewState, VM> {
     
     func populate(pinyinList: Array<Pinyin>) {
         fatalError("populate() must be implemented")
     }
     
+    override func idleIntent() -> PinyinListIntent {
+        return PinyinListIntent.Idle
+    }
+    
     override func intents() -> Observable<PinyinListIntent> {
-        return Observable.just(PinyinListIntent.Search(terms: "pinyin"))
+        return (self.parent as! SearchViewController)
+            .searchBar.rx.text
+            .asObservable()
+            .map { terms in PinyinListIntent.Search(terms: terms!) }
     }
     
     override func render(state: PinyinListViewState) {
         switch state {
+        case .Idle:
+            break
         case .Populate(let pinyinList):
             populate(pinyinList: pinyinList)
         case .NavigateToDetails(let pinyin):
-            print("navigate to details")
+            setDestinationBundle(bundle: SegueBundle(identifier: "searchToDetails", dictionary: [
+                "phoneticScriptText":pinyin.phoneticScriptText,
+                "englishTranslationText":pinyin.englishTranslationText,
+                "chineseCharacters":pinyin.chineseCharacters,
+                "audioSrc":pinyin.audioSrc
+            ]))
+            
+            performSegueOnParent(withIdentifier: "searchToDetails", sender: self)
+            
         case .PlayAudio(let audioSrc):
             print("play audio")
         case .OnError:
             fatalError("The database must be corrupted :(")
         }
-    }
-    
-    override func provideViewModel() -> PinyinListViewModel {
-        return PinyinListViewModel(initialState: PinyinListViewState.Populate(pinyinList: []))
     }
 }

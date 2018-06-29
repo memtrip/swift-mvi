@@ -8,7 +8,7 @@ class FetchAndSavePinyin {
     
     func save() -> Single<[Pinyin]> {
         return pinyinApi.getDictionary().flatMap {
-            json in return self.savePinyin.insert(pinyinJson: json.pinyin!)
+            response in return self.savePinyin.insert(pinyinJson: response.body!.pinyin)
         }
     }
 }

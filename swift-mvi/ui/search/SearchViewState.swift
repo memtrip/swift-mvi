@@ -1,5 +1,6 @@
 import Foundation
 
-enum SearchViewState : MviViewState {
-    case SearchHint(hint: String)
+struct SearchViewState : MviViewState, Copy {
+    var hint: String
+    var page: SearchPage
 }

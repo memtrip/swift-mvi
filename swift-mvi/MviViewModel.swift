@@ -7,22 +7,8 @@ class MviViewModel<I : MviIntent, R : MviResult, VS: MviViewState> {
     private let initialState: VS
     private let disposable = CompositeDisposable()
     
-    private var statesObservable: Observable<VS>?
-    
-    init(initialState: VS) {
-        self.initialState = initialState
-    }
-    
-    func states() -> Observable<VS> {
-        if let states = statesObservable {
-            return states
-        } else {
-            fatalError("The MviViewController should call bind immediately after initialising MviViewModel")
-        }
-    }
-    
-    func bind() {
-        statesObservable = intentsSubject
+    private lazy var statesObservable: Observable<VS> = {
+        return intentsSubject
             .flatMap {
                 intent in self.log(intent: intent)
             }
@@ -34,10 +20,22 @@ class MviViewModel<I : MviIntent, R : MviResult, VS: MviViewState> {
             }
             .replay(1)
             .autoconnect()
+    }()
+    
+    init(initialState: VS) {
+        self.initialState = initialState
+    }
+    
+    func states() -> Observable<VS> {
+        return statesObservable
     }
     
     func processIntents(intents: Observable<I>) {
         _ = disposable.insert(intents.subscribe(intentsSubject))
+    }
+    
+    func publish(intent: I) {
+        intentsSubject.onNext(intent)
     }
     
     private func log(intent: I) -> Observable<I> {

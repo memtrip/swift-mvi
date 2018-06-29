@@ -3,7 +3,7 @@ import RxSwift
 import Alamofire
 
 protocol PinyinApi {
-    func getDictionary() -> Single<PinyinWrapperJson>
+    func getDictionary() -> Single<HttpResponse<PinyinWrapperJson>>
 }
 
 class PinyinApiImpl: PinyinApi {
@@ -14,8 +14,8 @@ class PinyinApiImpl: PinyinApi {
         "Accept-Language":"en-GB"
     ]
     
-    func getDictionary() -> Single<PinyinWrapperJson> {
-        return Http().single(
+    func getDictionary() -> Single<HttpResponse<PinyinWrapperJson>> {
+        return Http<PinyinWrapperJson, ErrorJson>().single(
             url: ApiConfig.ENDPOINT + "/pinyin/",
             method: .get,
             headers: headers

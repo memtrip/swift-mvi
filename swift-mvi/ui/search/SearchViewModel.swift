@@ -16,15 +16,19 @@ class SearchViewModel : MviViewModel<SearchIntent, SearchResult, SearchViewState
     
     override func dispatcher(intent: SearchIntent) -> Observable<SearchResult> {
         switch intent {
+        case .Idle:
+            return Observable.just(SearchResult.Idle)
         case .SearchHint(let page):
-            return Observable.just(SearchResult.SearchHint(hint: pageHint(page: page)))
+            return Observable.just(SearchResult.ChangePage(hint: pageHint(page: page), page: page))
         }
     }
     
     override func reducer(previousState: SearchViewState, result: SearchResult) -> SearchViewState {
         switch result {
-        case .SearchHint(let hint):
-            return SearchViewState.SearchHint(hint: hint)
+        case .Idle:
+            return previousState
+        case .ChangePage(let hint, let page):
+            return SearchViewState(hint: hint, page: page)
         }
     }
 }
