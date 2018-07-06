@@ -300,7 +300,6 @@
 		3CAF730920E41D7700C63759 /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				3CAF730B20E41DF800C63759 /* detail */,
 				3CAF730A20E41DBB00C63759 /* search */,
 				3CCBF1D920E0D73E00056A8F /* entry */,
 			);
@@ -320,13 +319,6 @@
 				3CAF731620E4255D00C63759 /* SearchPage.swift */,
 			);
 			path = search;
-			sourceTree = "<group>";
-		};
-		3CAF730B20E41DF800C63759 /* detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = detail;
 			sourceTree = "<group>";
 		};
 		3CBF3D9B20E42DD300F19354 /* list */ = {
@@ -390,9 +382,6 @@
 		3CC08B9820E2B1DE00C32823 /* usecase */ = {
 			isa = PBXGroup;
 			children = (
-				3C73011C20E3786400C139BA /* realm */,
-				3CC08B8F20E2AD2200C32823 /* api */,
-				3C15820220E2302D0069FAF1 /* network */,
 				3CC08B9920E2B1F100C32823 /* FetchAndSavePinyin.swift */,
 			);
 			path = usecase;
@@ -423,6 +412,9 @@
 			isa = PBXGroup;
 			children = (
 				3CCBF18C20DD027200056A8F /* Main.storyboard */,
+				3CC08B8F20E2AD2200C32823 /* api */,
+				3C15820220E2302D0069FAF1 /* network */,
+				3C73011C20E3786400C139BA /* realm */,
 				3CC08B9820E2B1DE00C32823 /* usecase */,
 				3CAF730920E41D7700C63759 /* ui */,
 				3CCBF18820DD027200056A8F /* AppDelegate.swift */,
