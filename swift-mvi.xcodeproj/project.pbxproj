@@ -307,6 +307,8 @@
 		3CAF730920E41D7700C63759 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				3C7273C820E2B74E00FC69DA /* View.swift */,
+				3CB8A9CC20EF734D00D32E61 /* SegueBundle.swift */,
 				3CAF730A20E41DBB00C63759 /* search */,
 				3CCBF1D920E0D73E00056A8F /* entry */,
 			);
@@ -434,11 +436,9 @@
 				3CCBF1C720E0BD7100056A8F /* MviIntent.swift */,
 				3CCBF1C920E0BD8E00056A8F /* MviResult.swift */,
 				3CCBF1CB20E0BDA400056A8F /* MviViewState.swift */,
-				3CCBF1D720E0CCBB00056A8F /* Rx.swift */,
-				3CC08B8320E2A59600C32823 /* Logger.swift */,
-				3C7273C820E2B74E00FC69DA /* View.swift */,
 				3C31542720E5891100C50950 /* Copy.swift */,
-				3CB8A9CC20EF734D00D32E61 /* SegueBundle.swift */,
+				3CC08B8320E2A59600C32823 /* Logger.swift */,
+				3CCBF1D720E0CCBB00056A8F /* Rx.swift */,
 			);
 			path = "swift-mvi";
 			sourceTree = "<group>";
