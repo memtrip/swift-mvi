@@ -11,7 +11,6 @@
 		3C567B4420EFE07E003D3A76 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4320EFE07E003D3A76 /* Connection.swift */; };
 		3C567B4620EFE15C003D3A76 /* AlmoConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4520EFE15C003D3A76 /* AlmoConnection.swift */; };
 		3C567B4920EFE1DB003D3A76 /* StubConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4820EFE1DB003D3A76 /* StubConnection.swift */; };
-		3C567B4B20EFE590003D3A76 /* RxRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C567B4A20EFE590003D3A76 /* RxRealm.framework */; };
 		3C7273C920E2B74E00FC69DA /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7273C820E2B74E00FC69DA /* View.swift */; };
 		3C73012120E37A3200C139BA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C73011F20E37A3100C139BA /* RealmSwift.framework */; };
 		3C73012220E37A3200C139BA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C73012020E37A3100C139BA /* Realm.framework */; };
@@ -199,7 +198,6 @@
 				3C73012120E37A3200C139BA /* RealmSwift.framework in Frameworks */,
 				3C73012220E37A3200C139BA /* Realm.framework in Frameworks */,
 				3CCBF1BE20E0B87700056A8F /* RxBlocking.framework in Frameworks */,
-				3C567B4B20EFE590003D3A76 /* RxRealm.framework in Frameworks */,
 				3CC08B8C20E2ABB800C32823 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,7 +224,6 @@
 			children = (
 				3C567B4720EFE1CB003D3A76 /* stub */,
 				3CC08B8120E2A4DF00C32823 /* RxHttp.swift */,
-				3CC08B8320E2A59600C32823 /* Logger.swift */,
 				3CFC470120EFCF9100A47403 /* HttpErrorResponse.swift */,
 				3CC08B8520E2A8F400C32823 /* HttpResponse.swift */,
 				3C567B4320EFE07E003D3A76 /* Connection.swift */,
@@ -427,6 +424,7 @@
 				3CCBF1C920E0BD8E00056A8F /* MviResult.swift */,
 				3CCBF1CB20E0BDA400056A8F /* MviViewState.swift */,
 				3CCBF1D720E0CCBB00056A8F /* Rx.swift */,
+				3CC08B8320E2A59600C32823 /* Logger.swift */,
 				3C7273C820E2B74E00FC69DA /* View.swift */,
 				3C31542720E5891100C50950 /* Copy.swift */,
 				3CB8A9CC20EF734D00D32E61 /* SegueBundle.swift */,
@@ -489,7 +487,6 @@
 				3CCBF18220DD027200056A8F /* Frameworks */,
 				3CCBF18320DD027200056A8F /* Resources */,
 				3CCBF1C120E0BB1100056A8F /* ShellScript */,
-				3CCBF1C220E0BC3100056A8F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -622,7 +619,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxRealm.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxBlocking.framework",
@@ -631,24 +627,10 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RealmSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Realm.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRealm.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		3CCBF1C220E0BC3100056A8F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage outdated --xcode-warnings";
 		};
 /* End PBXShellScriptBuildPhase section */
 

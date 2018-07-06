@@ -2,7 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class PinyinPhoneticViewController : PinyinListViewController<PinyinCharacterViewModel> {
+class PinyinPhoneticViewController : PinyinListViewController<PinyinPhoneticViewModel> {
     
     private lazy var pinyinPhoneticTableView: PinyinPhoneticTableView = {
         let tableView = PinyinPhoneticTableView(frame: self.view.bounds, style: UITableViewStyle.plain)
@@ -20,8 +20,8 @@ class PinyinPhoneticViewController : PinyinListViewController<PinyinCharacterVie
         pinyinPhoneticTableView.populate(pinyin: pinyinList)
     }
     
-    override func provideViewModel() -> PinyinCharacterViewModel {
-        return PinyinCharacterViewModel()
+    override func provideViewModel() -> PinyinPhoneticViewModel {
+        return PinyinPhoneticViewModel()
     }
     
     override func intents() -> Observable<PinyinListIntent> {

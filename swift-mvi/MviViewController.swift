@@ -18,7 +18,7 @@ class MviViewController<I : MviIntent, R: MviResult, VS: MviViewState, VM : MviV
         DispatchQueue.main.async {
             self.viewModel.states().observeOn(MainScheduler.instance).subscribe(onNext: {
                 state in
-                self.log(state: state)
+                Logger.log(value: "\(state)", trim: true)
                 self.render(state: state)
             }).disposed(by: self.disposeBag)
             

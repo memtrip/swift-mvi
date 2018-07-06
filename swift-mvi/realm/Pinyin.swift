@@ -1,10 +1,5 @@
 import Foundation
-import RxSwift
 import RealmSwift
-
-class PinyinDatabase: Object {
-    let pinyin = List<Pinyin>()
-}
 
 class Pinyin: Object {
     @objc dynamic var sourceUrl = ""
