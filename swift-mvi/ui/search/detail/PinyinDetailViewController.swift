@@ -8,7 +8,7 @@ class PinyinDetailViewController : MviViewController<PinyinDetailIntent, PinyinD
     @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var containerView: UIView!
     
-    lazy var tableView: PinyinDetailTableViewController = {
+    lazy var tableViewController: PinyinDetailTableViewController = {
         return (self.childViewControllers.last as! PinyinDetailTableViewController)
     }()
     
@@ -25,10 +25,11 @@ class PinyinDetailViewController : MviViewController<PinyinDetailIntent, PinyinD
     
     override func render(state: PinyinDetailViewState) {
         navigationBar.topItem?.title = state.phoneticScriptText
-        tableView.phoneticScript.text = state.phoneticScriptText
-        tableView.englishTranslation.text = state.englishTranslationText
-        tableView.chineseCharacters.text = state.chineseCharacters
-
+        tableViewController.phoneticScript.text = state.phoneticScriptText
+        tableViewController.englishTranslation.text = state.englishTranslationText
+        tableViewController.chineseCharacters.text = state.chineseCharacters
+        tableViewController.tableView.reloadData()
+        
         if (state.action == PinyinDetailViewState.Action.Back) {
             self.dismiss(animated: true, completion: nil)
         }
