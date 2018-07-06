@@ -7,6 +7,8 @@ class PinyinDetailViewModel : MviViewModel<PinyinDetailIntent, PinyinDetailResul
         switch intent {
         case .Init:
             return Observable.just(PinyinDetailResult.Init)
+        case .PlayAudio:
+            return Observable.just(PinyinDetailResult.PlayAudio)
         case .Exit:
             return Observable.just(PinyinDetailResult.Exit)
         }
@@ -16,6 +18,10 @@ class PinyinDetailViewModel : MviViewModel<PinyinDetailIntent, PinyinDetailResul
         switch result {
         case .Init:
             return previousState
+        case .PlayAudio:
+            return previousState.copy(copy: {
+                copy in copy.action = PinyinDetailViewState.Action.PlayAudio(url: previousState.audioSrc)
+            })
         case .Exit:
             return previousState.copy(copy: {
                 copy in copy.action = PinyinDetailViewState.Action.Back

@@ -11,6 +11,7 @@
 		3C567B4420EFE07E003D3A76 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4320EFE07E003D3A76 /* Connection.swift */; };
 		3C567B4620EFE15C003D3A76 /* AlmoConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4520EFE15C003D3A76 /* AlmoConnection.swift */; };
 		3C567B4920EFE1DB003D3A76 /* StubConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4820EFE1DB003D3A76 /* StubConnection.swift */; };
+		3C567B4E20F00A64003D3A76 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4D20F00A64003D3A76 /* SoundPlayer.swift */; };
 		3C7273C920E2B74E00FC69DA /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7273C820E2B74E00FC69DA /* View.swift */; };
 		3C73012120E37A3200C139BA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C73011F20E37A3100C139BA /* RealmSwift.framework */; };
 		3C73012220E37A3200C139BA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C73012020E37A3100C139BA /* Realm.framework */; };
@@ -108,6 +109,7 @@
 		3C567B4520EFE15C003D3A76 /* AlmoConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlmoConnection.swift; sourceTree = "<group>"; };
 		3C567B4820EFE1DB003D3A76 /* StubConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubConnection.swift; sourceTree = "<group>"; };
 		3C567B4A20EFE590003D3A76 /* RxRealm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRealm.framework; path = Carthage/Build/iOS/RxRealm.framework; sourceTree = "<group>"; };
+		3C567B4D20F00A64003D3A76 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		3C7273C820E2B74E00FC69DA /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		3C73011F20E37A3100C139BA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		3C73012020E37A3100C139BA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -238,6 +240,14 @@
 				3C567B4820EFE1DB003D3A76 /* StubConnection.swift */,
 			);
 			path = stub;
+			sourceTree = "<group>";
+		};
+		3C567B4C20F009F9003D3A76 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				3C567B4D20F00A64003D3A76 /* SoundPlayer.swift */,
+			);
+			path = media;
 			sourceTree = "<group>";
 		};
 		3C73011C20E3786400C139BA /* realm */ = {
@@ -412,6 +422,7 @@
 				3CC08B8F20E2AD2200C32823 /* api */,
 				3C15820220E2302D0069FAF1 /* network */,
 				3C73011C20E3786400C139BA /* realm */,
+				3C567B4C20F009F9003D3A76 /* media */,
 				3CC08B9820E2B1DE00C32823 /* usecase */,
 				3CAF730920E41D7700C63759 /* ui */,
 				3CCBF18820DD027200056A8F /* AppDelegate.swift */,
@@ -661,6 +672,7 @@
 				3CBF3DAF20E434B500F19354 /* PinyinCharacterViewModel.swift in Sources */,
 				3CBF3D9D20E42DE400F19354 /* PinyinListViewController.swift in Sources */,
 				3CBF3DAD20E434AD00F19354 /* PinyinCharacterViewController.swift in Sources */,
+				3C567B4E20F00A64003D3A76 /* SoundPlayer.swift in Sources */,
 				3CC08B9120E2AE8200C32823 /* PinyinApi.swift in Sources */,
 				3CC08B8220E2A4DF00C32823 /* RxHttp.swift in Sources */,
 				3C8F010F20E658F600022DF6 /* PinyinCharacterTableView.swift in Sources */,
