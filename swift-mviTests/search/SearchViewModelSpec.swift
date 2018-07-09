@@ -54,7 +54,7 @@ class SearchViewModelSpec: QuickSpec {
                     expect(results.events[0].value.element == SearchViewState(
                         hint: "Search english translations...",
                         page: SearchPage.English)
-                        ).to(beTrue())
+                    ).to(beTrue())
                 }
             }
         }
@@ -78,7 +78,7 @@ class SearchViewModelSpec: QuickSpec {
                     expect(results.events[0].value.element == SearchViewState(
                         hint: "寻找汉语词典",
                         page: SearchPage.Character)
-                        ).to(beTrue())
+                    ).to(beTrue())
                 }
             }
         }

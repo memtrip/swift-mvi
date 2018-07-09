@@ -86,6 +86,7 @@
 		3CCBF1D420E0C7A700056A8F /* EntryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1D320E0C7A700056A8F /* EntryResult.swift */; };
 		3CCBF1D620E0C7C600056A8F /* EntryViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1D520E0C7C600056A8F /* EntryViewState.swift */; };
 		3CCBF1D820E0CCBB00056A8F /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1D720E0CCBB00056A8F /* Rx.swift */; };
+		3CF432B120F3514600F3A5B7 /* PinyinListViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF432B020F3514600F3A5B7 /* PinyinListViewModelSpec.swift */; };
 		3CFC470020EFCEDA00A47403 /* ErrorJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFC46FF20EFCEDA00A47403 /* ErrorJson.swift */; };
 		3CFC470220EFCF9100A47403 /* HttpErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFC470120EFCF9100A47403 /* HttpErrorResponse.swift */; };
 		3CFC470420EFD8B200A47403 /* PinyinDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFC470320EFD8B200A47403 /* PinyinDetailsTableViewController.swift */; };
@@ -195,6 +196,7 @@
 		3CCBF1D320E0C7A700056A8F /* EntryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryResult.swift; sourceTree = "<group>"; };
 		3CCBF1D520E0C7C600056A8F /* EntryViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewState.swift; sourceTree = "<group>"; };
 		3CCBF1D720E0CCBB00056A8F /* Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
+		3CF432B020F3514600F3A5B7 /* PinyinListViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinListViewModelSpec.swift; sourceTree = "<group>"; };
 		3CFC46FF20EFCEDA00A47403 /* ErrorJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorJson.swift; sourceTree = "<group>"; };
 		3CFC470120EFCF9100A47403 /* HttpErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpErrorResponse.swift; sourceTree = "<group>"; };
 		3CFC470320EFD8B200A47403 /* PinyinDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinDetailsTableViewController.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				3C567B5D20F345C7003D3A76 /* detail */,
+				3C567B6020F34CDD003D3A76 /* list */,
 				3C567B5B20F33E3D003D3A76 /* SearchViewModelSpec.swift */,
 			);
 			path = search;
@@ -286,6 +289,14 @@
 				3C567B5E20F345EA003D3A76 /* PinyinDetailViewModelSpec.swift */,
 			);
 			path = detail;
+			sourceTree = "<group>";
+		};
+		3C567B6020F34CDD003D3A76 /* list */ = {
+			isa = PBXGroup;
+			children = (
+				3CF432B020F3514600F3A5B7 /* PinyinListViewModelSpec.swift */,
+			);
+			path = list;
 			sourceTree = "<group>";
 		};
 		3C73011C20E3786400C139BA /* realm */ = {
@@ -769,6 +780,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C567B5C20F33E3D003D3A76 /* SearchViewModelSpec.swift in Sources */,
+				3CF432B120F3514600F3A5B7 /* PinyinListViewModelSpec.swift in Sources */,
 				3C567B5020F324B4003D3A76 /* EntryViewModelSpec.swift in Sources */,
 				3C567B5F20F345EA003D3A76 /* PinyinDetailViewModelSpec.swift in Sources */,
 			);
