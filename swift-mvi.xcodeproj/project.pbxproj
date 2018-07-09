@@ -12,10 +12,12 @@
 		3C567B4620EFE15C003D3A76 /* AlmoConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4520EFE15C003D3A76 /* AlmoConnection.swift */; };
 		3C567B4920EFE1DB003D3A76 /* StubConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4820EFE1DB003D3A76 /* StubConnection.swift */; };
 		3C567B4E20F00A64003D3A76 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4D20F00A64003D3A76 /* SoundPlayer.swift */; };
-		3C567B5020F324B4003D3A76 /* EntryViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4F20F324B4003D3A76 /* EntryViewModelTest.swift */; };
+		3C567B5020F324B4003D3A76 /* EntryViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4F20F324B4003D3A76 /* EntryViewModelSpec.swift */; };
 		3C567B5520F325FD003D3A76 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C567B5320F325FC003D3A76 /* Nimble.framework */; };
 		3C567B5620F325FD003D3A76 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C567B5420F325FC003D3A76 /* Quick.framework */; };
 		3C567B5820F338AD003D3A76 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C567B5720F338AD003D3A76 /* RxTest.framework */; };
+		3C567B5C20F33E3D003D3A76 /* SearchViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B5B20F33E3D003D3A76 /* SearchViewModelSpec.swift */; };
+		3C567B5F20F345EA003D3A76 /* PinyinDetailViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B5E20F345EA003D3A76 /* PinyinDetailViewModelSpec.swift */; };
 		3C7273C920E2B74E00FC69DA /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7273C820E2B74E00FC69DA /* View.swift */; };
 		3C73012120E37A3200C139BA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C73011F20E37A3100C139BA /* RealmSwift.framework */; };
 		3C73012220E37A3200C139BA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C73012020E37A3100C139BA /* Realm.framework */; };
@@ -70,7 +72,6 @@
 		3CCBF18E20DD027200056A8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCBF18C20DD027200056A8F /* Main.storyboard */; };
 		3CCBF19020DD027300056A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CCBF18F20DD027300056A8F /* Assets.xcassets */; };
 		3CCBF19320DD027300056A8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCBF19120DD027300056A8F /* LaunchScreen.storyboard */; };
-		3CCBF19E20DD027300056A8F /* swift_mviTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF19D20DD027300056A8F /* swift_mviTests.swift */; };
 		3CCBF1A920DD027400056A8F /* swift_mviUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1A820DD027400056A8F /* swift_mviUITests.swift */; };
 		3CCBF1BB20E0B87700056A8F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCBF1B720E0B87700056A8F /* RxSwift.framework */; };
 		3CCBF1BD20E0B87700056A8F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCBF1B920E0B87700056A8F /* RxCocoa.framework */; };
@@ -114,10 +115,12 @@
 		3C567B4820EFE1DB003D3A76 /* StubConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubConnection.swift; sourceTree = "<group>"; };
 		3C567B4A20EFE590003D3A76 /* RxRealm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRealm.framework; path = Carthage/Build/iOS/RxRealm.framework; sourceTree = "<group>"; };
 		3C567B4D20F00A64003D3A76 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
-		3C567B4F20F324B4003D3A76 /* EntryViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModelTest.swift; sourceTree = "<group>"; };
+		3C567B4F20F324B4003D3A76 /* EntryViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModelSpec.swift; sourceTree = "<group>"; };
 		3C567B5320F325FC003D3A76 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		3C567B5420F325FC003D3A76 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		3C567B5720F338AD003D3A76 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		3C567B5B20F33E3D003D3A76 /* SearchViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelSpec.swift; sourceTree = "<group>"; };
+		3C567B5E20F345EA003D3A76 /* PinyinDetailViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinDetailViewModelSpec.swift; sourceTree = "<group>"; };
 		3C7273C820E2B74E00FC69DA /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		3C73011F20E37A3100C139BA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		3C73012020E37A3100C139BA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -175,7 +178,6 @@
 		3CCBF19220DD027300056A8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CCBF19420DD027300056A8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CCBF19920DD027300056A8F /* swift-mviTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-mviTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CCBF19D20DD027300056A8F /* swift_mviTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_mviTests.swift; sourceTree = "<group>"; };
 		3CCBF19F20DD027300056A8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CCBF1A420DD027400056A8F /* swift-mviUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-mviUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCBF1A820DD027400056A8F /* swift_mviUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_mviUITests.swift; sourceTree = "<group>"; };
@@ -259,6 +261,31 @@
 				3C567B4D20F00A64003D3A76 /* SoundPlayer.swift */,
 			);
 			path = media;
+			sourceTree = "<group>";
+		};
+		3C567B5920F33E15003D3A76 /* entry */ = {
+			isa = PBXGroup;
+			children = (
+				3C567B4F20F324B4003D3A76 /* EntryViewModelSpec.swift */,
+			);
+			path = entry;
+			sourceTree = "<group>";
+		};
+		3C567B5A20F33E26003D3A76 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				3C567B5D20F345C7003D3A76 /* detail */,
+				3C567B5B20F33E3D003D3A76 /* SearchViewModelSpec.swift */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		3C567B5D20F345C7003D3A76 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				3C567B5E20F345EA003D3A76 /* PinyinDetailViewModelSpec.swift */,
+			);
+			path = detail;
 			sourceTree = "<group>";
 		};
 		3C73011C20E3786400C139BA /* realm */ = {
@@ -457,8 +484,8 @@
 		3CCBF19C20DD027300056A8F /* swift-mviTests */ = {
 			isa = PBXGroup;
 			children = (
-				3C567B4F20F324B4003D3A76 /* EntryViewModelTest.swift */,
-				3CCBF19D20DD027300056A8F /* swift_mviTests.swift */,
+				3C567B5A20F33E26003D3A76 /* search */,
+				3C567B5920F33E15003D3A76 /* entry */,
 				3CCBF19F20DD027300056A8F /* Info.plist */,
 			);
 			path = "swift-mviTests";
@@ -741,8 +768,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCBF19E20DD027300056A8F /* swift_mviTests.swift in Sources */,
-				3C567B5020F324B4003D3A76 /* EntryViewModelTest.swift in Sources */,
+				3C567B5C20F33E3D003D3A76 /* SearchViewModelSpec.swift in Sources */,
+				3C567B5020F324B4003D3A76 /* EntryViewModelSpec.swift in Sources */,
+				3C567B5F20F345EA003D3A76 /* PinyinDetailViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
