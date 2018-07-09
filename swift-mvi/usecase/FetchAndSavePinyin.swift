@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-class FetchAndSavePinyin {
+class FetchAndSavePinyinImpl : FetchAndSavePinyin {
     
     private let pinyinApi: PinyinApi = PinyinApiImpl()
     private let savePinyin = SavePinyin()
@@ -11,4 +11,8 @@ class FetchAndSavePinyin {
             response in return self.savePinyin.insert(pinyinJson: response.body!.pinyin)
         }
     }
+}
+
+protocol FetchAndSavePinyin {
+    func save() -> Single<[Pinyin]>
 }

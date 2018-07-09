@@ -34,8 +34,6 @@ class PinyinListViewController<VM : PinyinListViewModel>: MviViewController<Piny
             
             performSegueOnParent(withIdentifier: "searchToDetails", sender: self)
             
-        case .PlayAudio(let audioSrc):
-            print("play audio")
         case .OnError:
             fatalError("The database must be corrupted :(")
         }

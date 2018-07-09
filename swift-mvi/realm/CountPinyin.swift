@@ -2,7 +2,7 @@ import Foundation
 import RxSwift
 import RealmSwift
 
-class CountPinyin {
+class CountPinyinImpl : CountPinyin {
     
     func count() -> Single<Int> {
         return Single<Int>.create { single in
@@ -14,4 +14,8 @@ class CountPinyin {
             return Disposables.create()
         }
     }
+}
+
+protocol CountPinyin {
+    func count() -> Single<Int>
 }

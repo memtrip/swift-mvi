@@ -3,8 +3,14 @@ import RxSwift
 
 class EntryViewModel : MviViewModel<EntryIntent, EntryResult, EntryViewState> {
     
-    let fetchAndSavePinyin = FetchAndSavePinyin()
-    let countPinyin = CountPinyin()
+    let countPinyin: CountPinyin
+    let fetchAndSavePinyin: FetchAndSavePinyin
+    
+    init (countPinyin: CountPinyin, fetchAndSavePinyin: FetchAndSavePinyin, initialState: EntryViewState) {
+        self.countPinyin = countPinyin
+        self.fetchAndSavePinyin = fetchAndSavePinyin
+        super.init(initialState: initialState)
+    }
     
     private func fetch() -> Observable<EntryResult> {
         

@@ -12,6 +12,10 @@
 		3C567B4620EFE15C003D3A76 /* AlmoConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4520EFE15C003D3A76 /* AlmoConnection.swift */; };
 		3C567B4920EFE1DB003D3A76 /* StubConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4820EFE1DB003D3A76 /* StubConnection.swift */; };
 		3C567B4E20F00A64003D3A76 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4D20F00A64003D3A76 /* SoundPlayer.swift */; };
+		3C567B5020F324B4003D3A76 /* EntryViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4F20F324B4003D3A76 /* EntryViewModelTest.swift */; };
+		3C567B5520F325FD003D3A76 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C567B5320F325FC003D3A76 /* Nimble.framework */; };
+		3C567B5620F325FD003D3A76 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C567B5420F325FC003D3A76 /* Quick.framework */; };
+		3C567B5820F338AD003D3A76 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C567B5720F338AD003D3A76 /* RxTest.framework */; };
 		3C7273C920E2B74E00FC69DA /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7273C820E2B74E00FC69DA /* View.swift */; };
 		3C73012120E37A3200C139BA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C73011F20E37A3100C139BA /* RealmSwift.framework */; };
 		3C73012220E37A3200C139BA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C73012020E37A3100C139BA /* Realm.framework */; };
@@ -110,6 +114,10 @@
 		3C567B4820EFE1DB003D3A76 /* StubConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubConnection.swift; sourceTree = "<group>"; };
 		3C567B4A20EFE590003D3A76 /* RxRealm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRealm.framework; path = Carthage/Build/iOS/RxRealm.framework; sourceTree = "<group>"; };
 		3C567B4D20F00A64003D3A76 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		3C567B4F20F324B4003D3A76 /* EntryViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModelTest.swift; sourceTree = "<group>"; };
+		3C567B5320F325FC003D3A76 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		3C567B5420F325FC003D3A76 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		3C567B5720F338AD003D3A76 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		3C7273C820E2B74E00FC69DA /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		3C73011F20E37A3100C139BA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		3C73012020E37A3100C139BA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -208,6 +216,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C567B5520F325FD003D3A76 /* Nimble.framework in Frameworks */,
+				3C567B5620F325FD003D3A76 /* Quick.framework in Frameworks */,
+				3C567B5820F338AD003D3A76 /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +457,7 @@
 		3CCBF19C20DD027300056A8F /* swift-mviTests */ = {
 			isa = PBXGroup;
 			children = (
+				3C567B4F20F324B4003D3A76 /* EntryViewModelTest.swift */,
 				3CCBF19D20DD027300056A8F /* swift_mviTests.swift */,
 				3CCBF19F20DD027300056A8F /* Info.plist */,
 			);
@@ -464,6 +476,9 @@
 		3CCBF1B620E0B87700056A8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C567B5720F338AD003D3A76 /* RxTest.framework */,
+				3C567B5320F325FC003D3A76 /* Nimble.framework */,
+				3C567B5420F325FC003D3A76 /* Quick.framework */,
 				3C567B4A20EFE590003D3A76 /* RxRealm.framework */,
 				3C73012020E37A3100C139BA /* Realm.framework */,
 				3C73011F20E37A3100C139BA /* RealmSwift.framework */,
@@ -630,6 +645,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxBlocking.framework",
@@ -638,6 +656,9 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RealmSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Realm.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Quick.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -721,6 +742,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CCBF19E20DD027300056A8F /* swift_mviTests.swift in Sources */,
+				3C567B5020F324B4003D3A76 /* EntryViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -929,6 +951,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "swift-mviTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -949,6 +975,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "swift-mviTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -23,8 +23,6 @@ class PinyinListViewModel : MviViewModel<PinyinListIntent, PinyinListResult, Pin
                 .asObservable()
         case .SelectItem(let pinyin):
             return Observable.just(PinyinListResult.NavigateToDetails(pinyin: pinyin))
-        case .PlayAudio(let audioSrc):
-            return Observable.just(PinyinListResult.PlayAudio(audioSrc: audioSrc))
         }
     }
     
@@ -36,8 +34,6 @@ class PinyinListViewModel : MviViewModel<PinyinListIntent, PinyinListResult, Pin
             return PinyinListViewState.Populate(pinyinList: pinyinList)
         case .NavigateToDetails(let pinyin):
             return PinyinListViewState.NavigateToDetails(pinyin: pinyin)
-        case .PlayAudio(let audioSrc):
-            return PinyinListViewState.PlayAudio(audioSrc: audioSrc)
         case .OnError:
             return PinyinListViewState.OnError
         }

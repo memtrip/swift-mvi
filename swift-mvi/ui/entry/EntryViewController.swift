@@ -36,6 +36,9 @@ class EntryViewController: MviViewController<EntryIntent, EntryResult, EntryView
     }
     
     override func provideViewModel() -> EntryViewModel {
-        return EntryViewModel(initialState: EntryViewState.InProgress)
+        return EntryViewModel(
+            countPinyin: CountPinyinImpl(),
+            fetchAndSavePinyin: FetchAndSavePinyinImpl(),
+            initialState: EntryViewState.InProgress)
     }
 }
