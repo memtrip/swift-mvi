@@ -2,7 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class PinyinDetailViewController : MviViewController<PinyinDetailIntent, PinyinDetailResult, PinyinDetailViewState, PinyinDetailViewModel> {
+class PinyinDetailViewController : MxViewController<PinyinDetailIntent, PinyinDetailResult, PinyinDetailViewState, PinyinDetailViewModel> {
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var doneButton: UIBarButtonItem!

@@ -2,7 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class EntryViewController: MviViewController<EntryIntent, EntryResult, EntryViewState, EntryViewModel> {
+class EntryViewController: MxViewController<EntryIntent, EntryResult, EntryViewState, EntryViewModel> {
 
     @IBOutlet weak var errorContainer: UIStackView!
     @IBOutlet weak var retryButton: UIButton!

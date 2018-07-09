@@ -1,6 +1,6 @@
 import Foundation
 
-struct SearchViewState : MviViewState, Copy, Equatable {
+struct SearchViewState : MxViewState, Copy, Equatable {
     var hint: String
     var page: SearchPage
     

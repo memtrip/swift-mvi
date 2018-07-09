@@ -1,5 +1,5 @@
 import Foundation
 
-protocol MviResult {
+protocol MxResult {
     
 }

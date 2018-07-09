@@ -1,6 +1,6 @@
 import Foundation
 
-enum EntryResult : MviResult {
+enum EntryResult : MxResult {
     case Idle
     case InProgress
     case OnPinyinLoaded

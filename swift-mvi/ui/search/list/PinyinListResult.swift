@@ -1,6 +1,6 @@
 import Foundation
 
-enum PinyinListResult: MviResult {
+enum PinyinListResult: MxResult {
     case Idle
     case Populate(pinyinList: Array<Pinyin>)
     case NavigateToDetails(pinyin: Pinyin)

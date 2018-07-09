@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-class MviViewModel<I : MviIntent, R : MviResult, VS: MviViewState> {
+class MxViewModel<I : MxIntent, R : MxResult, VS: MxViewState> {
     
     private let intentsSubject: PublishSubject<I> =  PublishSubject()
     private let initialState: VS

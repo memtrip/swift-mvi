@@ -72,15 +72,14 @@
 		3CCBF18E20DD027200056A8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCBF18C20DD027200056A8F /* Main.storyboard */; };
 		3CCBF19020DD027300056A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CCBF18F20DD027300056A8F /* Assets.xcassets */; };
 		3CCBF19320DD027300056A8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCBF19120DD027300056A8F /* LaunchScreen.storyboard */; };
-		3CCBF1A920DD027400056A8F /* swift_mviUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1A820DD027400056A8F /* swift_mviUITests.swift */; };
 		3CCBF1BB20E0B87700056A8F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCBF1B720E0B87700056A8F /* RxSwift.framework */; };
 		3CCBF1BD20E0B87700056A8F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCBF1B920E0B87700056A8F /* RxCocoa.framework */; };
 		3CCBF1BE20E0B87700056A8F /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCBF1BA20E0B87700056A8F /* RxBlocking.framework */; };
-		3CCBF1C420E0BD2B00056A8F /* MviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1C320E0BD2B00056A8F /* MviViewController.swift */; };
-		3CCBF1C620E0BD4E00056A8F /* MviViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1C520E0BD4E00056A8F /* MviViewModel.swift */; };
-		3CCBF1C820E0BD7100056A8F /* MviIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1C720E0BD7100056A8F /* MviIntent.swift */; };
-		3CCBF1CA20E0BD8E00056A8F /* MviResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1C920E0BD8E00056A8F /* MviResult.swift */; };
-		3CCBF1CC20E0BDA400056A8F /* MviViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1CB20E0BDA400056A8F /* MviViewState.swift */; };
+		3CCBF1C420E0BD2B00056A8F /* MxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1C320E0BD2B00056A8F /* MxViewController.swift */; };
+		3CCBF1C620E0BD4E00056A8F /* MxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1C520E0BD4E00056A8F /* MxViewModel.swift */; };
+		3CCBF1C820E0BD7100056A8F /* MxIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1C720E0BD7100056A8F /* MxIntent.swift */; };
+		3CCBF1CA20E0BD8E00056A8F /* MxResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1C920E0BD8E00056A8F /* MxResult.swift */; };
+		3CCBF1CC20E0BDA400056A8F /* MxViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1CB20E0BDA400056A8F /* MxViewState.swift */; };
 		3CCBF1CE20E0BEAC00056A8F /* EntryIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1CD20E0BEAC00056A8F /* EntryIntent.swift */; };
 		3CCBF1D020E0C26C00056A8F /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1CF20E0C26C00056A8F /* EntryViewModel.swift */; };
 		3CCBF1D420E0C7A700056A8F /* EntryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCBF1D320E0C7A700056A8F /* EntryResult.swift */; };
@@ -181,16 +180,14 @@
 		3CCBF19920DD027300056A8F /* swift-mviTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-mviTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCBF19F20DD027300056A8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CCBF1A420DD027400056A8F /* swift-mviUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-mviUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CCBF1A820DD027400056A8F /* swift_mviUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_mviUITests.swift; sourceTree = "<group>"; };
-		3CCBF1AA20DD027400056A8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CCBF1B720E0B87700056A8F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		3CCBF1B920E0B87700056A8F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		3CCBF1BA20E0B87700056A8F /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
-		3CCBF1C320E0BD2B00056A8F /* MviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MviViewController.swift; sourceTree = "<group>"; };
-		3CCBF1C520E0BD4E00056A8F /* MviViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MviViewModel.swift; sourceTree = "<group>"; };
-		3CCBF1C720E0BD7100056A8F /* MviIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MviIntent.swift; sourceTree = "<group>"; };
-		3CCBF1C920E0BD8E00056A8F /* MviResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MviResult.swift; sourceTree = "<group>"; };
-		3CCBF1CB20E0BDA400056A8F /* MviViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MviViewState.swift; sourceTree = "<group>"; };
+		3CCBF1C320E0BD2B00056A8F /* MxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxViewController.swift; sourceTree = "<group>"; };
+		3CCBF1C520E0BD4E00056A8F /* MxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxViewModel.swift; sourceTree = "<group>"; };
+		3CCBF1C720E0BD7100056A8F /* MxIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxIntent.swift; sourceTree = "<group>"; };
+		3CCBF1C920E0BD8E00056A8F /* MxResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxResult.swift; sourceTree = "<group>"; };
+		3CCBF1CB20E0BDA400056A8F /* MxViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxViewState.swift; sourceTree = "<group>"; };
 		3CCBF1CD20E0BEAC00056A8F /* EntryIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryIntent.swift; sourceTree = "<group>"; };
 		3CCBF1CF20E0C26C00056A8F /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 		3CCBF1D320E0C7A700056A8F /* EntryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryResult.swift; sourceTree = "<group>"; };
@@ -450,7 +447,6 @@
 			children = (
 				3CCBF18720DD027200056A8F /* swift-mvi */,
 				3CCBF19C20DD027300056A8F /* swift-mviTests */,
-				3CCBF1A720DD027400056A8F /* swift-mviUITests */,
 				3CCBF18620DD027200056A8F /* Products */,
 				3CCBF1B620E0B87700056A8F /* Frameworks */,
 			);
@@ -480,11 +476,11 @@
 				3CCBF18F20DD027300056A8F /* Assets.xcassets */,
 				3CCBF19120DD027300056A8F /* LaunchScreen.storyboard */,
 				3CCBF19420DD027300056A8F /* Info.plist */,
-				3CCBF1C320E0BD2B00056A8F /* MviViewController.swift */,
-				3CCBF1C520E0BD4E00056A8F /* MviViewModel.swift */,
-				3CCBF1C720E0BD7100056A8F /* MviIntent.swift */,
-				3CCBF1C920E0BD8E00056A8F /* MviResult.swift */,
-				3CCBF1CB20E0BDA400056A8F /* MviViewState.swift */,
+				3CCBF1C320E0BD2B00056A8F /* MxViewController.swift */,
+				3CCBF1C520E0BD4E00056A8F /* MxViewModel.swift */,
+				3CCBF1C720E0BD7100056A8F /* MxIntent.swift */,
+				3CCBF1C920E0BD8E00056A8F /* MxResult.swift */,
+				3CCBF1CB20E0BDA400056A8F /* MxViewState.swift */,
 				3C31542720E5891100C50950 /* Copy.swift */,
 				3CC08B8320E2A59600C32823 /* Logger.swift */,
 				3CCBF1D720E0CCBB00056A8F /* Rx.swift */,
@@ -500,15 +496,6 @@
 				3CCBF19F20DD027300056A8F /* Info.plist */,
 			);
 			path = "swift-mviTests";
-			sourceTree = "<group>";
-		};
-		3CCBF1A720DD027400056A8F /* swift-mviUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3CCBF1A820DD027400056A8F /* swift_mviUITests.swift */,
-				3CCBF1AA20DD027400056A8F /* Info.plist */,
-			);
-			path = "swift-mviUITests";
 			sourceTree = "<group>";
 		};
 		3CCBF1B620E0B87700056A8F /* Frameworks */ = {
@@ -717,7 +704,7 @@
 				3CCBF1D620E0C7C600056A8F /* EntryViewState.swift in Sources */,
 				3CC08B9720E2B10C00C32823 /* ApiConfig.swift in Sources */,
 				3C567B4420EFE07E003D3A76 /* Connection.swift in Sources */,
-				3CCBF1CC20E0BDA400056A8F /* MviViewState.swift in Sources */,
+				3CCBF1CC20E0BDA400056A8F /* MxViewState.swift in Sources */,
 				3CBF3DB220E434C900F19354 /* PinyinEnglishViewController.swift in Sources */,
 				3CBF3DB420E434D200F19354 /* PinyinEnglishViewModel.swift in Sources */,
 				3CC08B9520E2AF1500C32823 /* PinyinJson.swift in Sources */,
@@ -738,9 +725,9 @@
 				3CC08B8620E2A8F400C32823 /* HttpResponse.swift in Sources */,
 				3C8EE07520E43CA80057D8B7 /* PinyinDetailViewState.swift in Sources */,
 				3CFC470420EFD8B200A47403 /* PinyinDetailsTableViewController.swift in Sources */,
-				3CCBF1CA20E0BD8E00056A8F /* MviResult.swift in Sources */,
+				3CCBF1CA20E0BD8E00056A8F /* MxResult.swift in Sources */,
 				3CAF731320E41E2200C63759 /* SearchViewState.swift in Sources */,
-				3CCBF1C620E0BD4E00056A8F /* MviViewModel.swift in Sources */,
+				3CCBF1C620E0BD4E00056A8F /* MxViewModel.swift in Sources */,
 				3CAF730D20E41E0400C63759 /* SearchViewController.swift in Sources */,
 				3C8F010920E6390300022DF6 /* PinyinEnglishTableView.swift in Sources */,
 				3CC08B8420E2A59600C32823 /* Logger.swift in Sources */,
@@ -761,11 +748,11 @@
 				3C8F010120E636BD00022DF6 /* PinyinListTableView.swift in Sources */,
 				3C8F010D20E658E300022DF6 /* PinyinCharacterTableViewCell.swift in Sources */,
 				3C8EE07120E43C820057D8B7 /* PinyinDetailIntent.swift in Sources */,
-				3CCBF1C820E0BD7100056A8F /* MviIntent.swift in Sources */,
+				3CCBF1C820E0BD7100056A8F /* MxIntent.swift in Sources */,
 				3CBF3D9F20E42DF300F19354 /* PinyinListViewModel.swift in Sources */,
 				3CB8A9CD20EF734D00D32E61 /* SegueBundle.swift in Sources */,
 				3CBF3DA320E42E0D00F19354 /* PinyinListViewState.swift in Sources */,
-				3CCBF1C420E0BD2B00056A8F /* MviViewController.swift in Sources */,
+				3CCBF1C420E0BD2B00056A8F /* MxViewController.swift in Sources */,
 				3CC08B9320E2AECD00C32823 /* PinyinWrapperJson.swift in Sources */,
 				3CBF3DAA20E4349C00F19354 /* PinyinPhoneticViewModel.swift in Sources */,
 				3CBF3DA820E4349200F19354 /* PinyinPhoneticViewController.swift in Sources */,
@@ -790,7 +777,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCBF1A920DD027400056A8F /* swift_mviUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

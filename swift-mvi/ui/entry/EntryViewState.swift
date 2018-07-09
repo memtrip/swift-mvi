@@ -1,6 +1,6 @@
 import Foundation
 
-enum EntryViewState : MviViewState {
+enum EntryViewState : MxViewState {
     case Idle
     case InProgress
     case OnPinyinLoaded

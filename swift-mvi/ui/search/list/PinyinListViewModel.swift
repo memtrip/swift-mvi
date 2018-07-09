@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-class PinyinListViewModel : MviViewModel<PinyinListIntent, PinyinListResult, PinyinListViewState> {
+class PinyinListViewModel : MxViewModel<PinyinListIntent, PinyinListResult, PinyinListViewState> {
     
     let search: PinyinSearch
     let defaultSearchTerm: String

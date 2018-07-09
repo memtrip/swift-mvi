@@ -2,7 +2,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class SearchViewController: MviViewController<SearchIntent, SearchResult, SearchViewState, SearchViewModel> {
+class SearchViewController: MxViewController<SearchIntent, SearchResult, SearchViewState, SearchViewModel> {
  
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var segmentControl: UISegmentedControl!

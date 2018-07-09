@@ -1,6 +1,6 @@
 import Foundation
 
-enum PinyinListIntent : MviIntent {
+enum PinyinListIntent : MxIntent {
     case Idle
     case Search(terms: String)
     case SelectItem(pinyin: Pinyin)

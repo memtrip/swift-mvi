@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-class PinyinDetailViewModel : MviViewModel<PinyinDetailIntent, PinyinDetailResult, PinyinDetailViewState> {
+class PinyinDetailViewModel : MxViewModel<PinyinDetailIntent, PinyinDetailResult, PinyinDetailViewState> {
     
     override func dispatcher(intent: PinyinDetailIntent) -> Observable<PinyinDetailResult> {
         switch intent {

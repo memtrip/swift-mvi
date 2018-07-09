@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-class EntryViewModel : MviViewModel<EntryIntent, EntryResult, EntryViewState> {
+class EntryViewModel : MxViewModel<EntryIntent, EntryResult, EntryViewState> {
     
     let countPinyin: CountPinyin
     let fetchAndSavePinyin: FetchAndSavePinyin

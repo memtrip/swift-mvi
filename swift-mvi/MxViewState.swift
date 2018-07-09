@@ -1,5 +1,5 @@
 import Foundation
 
-protocol MviIntent {
+protocol MxViewState {
     
 }

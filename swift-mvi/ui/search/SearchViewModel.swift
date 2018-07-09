@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-class SearchViewModel : MviViewModel<SearchIntent, SearchResult, SearchViewState> {
+class SearchViewModel : MxViewModel<SearchIntent, SearchResult, SearchViewState> {
 
     private func pageHint(page: SearchPage) -> String {
         switch page {

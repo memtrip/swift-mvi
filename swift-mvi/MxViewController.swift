@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-class MviViewController<I : MviIntent, R: MviResult, VS: MviViewState, VM : MviViewModel<I, R, VS>>: UIViewController, BundleSender, Mvi {
+class MxViewController<I : MxIntent, R: MxResult, VS: MxViewState, VM : MxViewModel<I, R, VS>>: UIViewController, BundleSender, Mvi {
     
     typealias Intent = I
     typealias ViewState = VS

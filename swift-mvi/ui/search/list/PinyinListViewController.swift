@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-class PinyinListViewController<VM : PinyinListViewModel>: MviViewController<PinyinListIntent, PinyinListResult, PinyinListViewState, VM> {
+class PinyinListViewController<VM : PinyinListViewModel>: MxViewController<PinyinListIntent, PinyinListResult, PinyinListViewState, VM> {
     
     func populate(pinyinList: Array<Pinyin>) {
         fatalError("populate() must be implemented")

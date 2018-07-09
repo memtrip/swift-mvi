@@ -1,6 +1,6 @@
 import Foundation
 
-enum SearchIntent : MviIntent {
+enum SearchIntent : MxIntent {
     case Idle
     case SearchHint(page: SearchPage)
 }

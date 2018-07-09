@@ -1,6 +1,6 @@
 import Foundation
 
-struct PinyinDetailViewState : MviViewState, Copy, Equatable {
+struct PinyinDetailViewState : MxViewState, Copy, Equatable {
     var phoneticScriptText: String
     var englishTranslationText: String
     var chineseCharacters: String
