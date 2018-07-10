@@ -10,7 +10,7 @@ class MxViewController<I : MxIntent, R: MxResult, VS: MxViewState, VM : MxViewMo
     private let disposeBag = DisposeBag()
     private var destinationBundle: SegueBundle?
     
-    private lazy var viewModel: ViewModel = {
+    lazy var viewModel: ViewModel = {
         return provideViewModel()
     }()
     

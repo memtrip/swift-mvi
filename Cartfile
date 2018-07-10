@@ -3,6 +3,9 @@ github "ReactiveX/RxSwift" ~> 4.0
 github "Alamofire/Alamofire" ~> 4.7
 github "realm/realm-cocoa"
 
+github "CosmicMind/Material"
+github "airbnb/lottie-ios" "master"
+
 # testing
 github "Quick/Quick" "v1.3.0"
 github "Quick/Nimble" "v7.1.1"

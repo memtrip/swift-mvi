@@ -8,9 +8,15 @@ class PinyinDetailViewController : MxViewController<PinyinDetailIntent, PinyinDe
     @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var cardViewHeight: NSLayoutConstraint!
+    
     lazy var tableViewController: PinyinDetailTableViewController = {
         return (self.childViewControllers.last as! PinyinDetailTableViewController)
     }()
+    
+    override func viewDidLayoutSubviews() {
+        cardViewHeight.constant = tableViewController.tableView.contentSize.height
+    }
     
     override func idleIntent() -> PinyinDetailIntent {
         return PinyinDetailIntent.Init
@@ -29,12 +35,17 @@ class PinyinDetailViewController : MxViewController<PinyinDetailIntent, PinyinDe
         tableViewController.phoneticScript.text = state.phoneticScriptText
         tableViewController.englishTranslation.text = state.englishTranslationText
         tableViewController.chineseCharacters.text = state.chineseCharacters
+        
         tableViewController.tableView.reloadData()
+        tableViewController.tableView.layoutIfNeeded()
+        
+        cardViewHeight.constant = tableViewController.tableView.contentSize.height
         
         if (state.audioSrc.isEmpty) {
             tableViewController.playButton.gone()
         } else {
             tableViewController.playButton.visible()
+            tableViewController.playButton.imageView?.tintColor = UIColor.App.Primary
         }
         
         switch state.action {

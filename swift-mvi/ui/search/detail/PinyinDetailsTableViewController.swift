@@ -8,10 +8,19 @@ class PinyinDetailTableViewController : UITableViewController {
     
     override func viewDidLoad() {
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 240
+        tableView.estimatedRowHeight = 30
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let headerView: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+        headerView.backgroundView?.backgroundColor = UIColor.white
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.estimatedRowHeight
     }
 }

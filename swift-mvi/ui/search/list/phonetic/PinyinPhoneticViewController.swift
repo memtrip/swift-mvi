@@ -8,6 +8,12 @@ class PinyinPhoneticViewController : PinyinListViewController<PinyinPhoneticView
         let tableView = PinyinPhoneticTableView(frame: self.view.bounds, style: UITableViewStyle.plain)
         tableView.frame = self.view.bounds
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        tableView.backgroundColor = UIColor.App.Background
+        
+        if let view = tableView.backgroundView {
+            view.backgroundColor = UIColor.App.Background
+        }
+
         return tableView
     }()
     

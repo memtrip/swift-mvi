@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3C31542820E5891100C50950 /* Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C31542720E5891100C50950 /* Copy.swift */; };
+		3C3B868420F4904800D2DF47 /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B868220F4904800D2DF47 /* Motion.framework */; };
+		3C3B868520F4904800D2DF47 /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B868320F4904800D2DF47 /* Material.framework */; };
+		3C3B868B20F4D23000D2DF47 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B868A20F4D23000D2DF47 /* Lottie.framework */; };
+		3C3B868C20F4D2F300D2DF47 /* lottie_chinese.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C3B868820F4D0A900D2DF47 /* lottie_chinese.json */; };
 		3C567B4420EFE07E003D3A76 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4320EFE07E003D3A76 /* Connection.swift */; };
 		3C567B4620EFE15C003D3A76 /* AlmoConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4520EFE15C003D3A76 /* AlmoConnection.swift */; };
 		3C567B4920EFE1DB003D3A76 /* StubConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C567B4820EFE1DB003D3A76 /* StubConnection.swift */; };
@@ -110,6 +114,10 @@
 
 /* Begin PBXFileReference section */
 		3C31542720E5891100C50950 /* Copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copy.swift; sourceTree = "<group>"; };
+		3C3B868220F4904800D2DF47 /* Motion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Motion.framework; path = Carthage/Build/iOS/Motion.framework; sourceTree = "<group>"; };
+		3C3B868320F4904800D2DF47 /* Material.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Material.framework; path = Carthage/Build/iOS/Material.framework; sourceTree = "<group>"; };
+		3C3B868820F4D0A900D2DF47 /* lottie_chinese.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lottie_chinese.json; sourceTree = "<group>"; };
+		3C3B868A20F4D23000D2DF47 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		3C567B4320EFE07E003D3A76 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		3C567B4520EFE15C003D3A76 /* AlmoConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlmoConnection.swift; sourceTree = "<group>"; };
 		3C567B4820EFE1DB003D3A76 /* StubConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubConnection.swift; sourceTree = "<group>"; };
@@ -208,6 +216,9 @@
 				3CCBF1BD20E0B87700056A8F /* RxCocoa.framework in Frameworks */,
 				3C73012120E37A3200C139BA /* RealmSwift.framework in Frameworks */,
 				3C73012220E37A3200C139BA /* Realm.framework in Frameworks */,
+				3C3B868420F4904800D2DF47 /* Motion.framework in Frameworks */,
+				3C3B868B20F4D23000D2DF47 /* Lottie.framework in Frameworks */,
+				3C3B868520F4904800D2DF47 /* Material.framework in Frameworks */,
 				3CCBF1BE20E0B87700056A8F /* RxBlocking.framework in Frameworks */,
 				3CC08B8C20E2ABB800C32823 /* Alamofire.framework in Frameworks */,
 			);
@@ -501,6 +512,9 @@
 		3CCBF1B620E0B87700056A8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C3B868A20F4D23000D2DF47 /* Lottie.framework */,
+				3C3B868320F4904800D2DF47 /* Material.framework */,
+				3C3B868220F4904800D2DF47 /* Motion.framework */,
 				3C567B5720F338AD003D3A76 /* RxTest.framework */,
 				3C567B5320F325FC003D3A76 /* Nimble.framework */,
 				3C567B5420F325FC003D3A76 /* Quick.framework */,
@@ -518,6 +532,7 @@
 		3CCBF1D920E0D73E00056A8F /* entry */ = {
 			isa = PBXGroup;
 			children = (
+				3C3B868820F4D0A900D2DF47 /* lottie_chinese.json */,
 				3CCBF18A20DD027200056A8F /* EntryViewController.swift */,
 				3CCBF1CF20E0C26C00056A8F /* EntryViewModel.swift */,
 				3CCBF1CD20E0BEAC00056A8F /* EntryIntent.swift */,
@@ -634,6 +649,7 @@
 			files = (
 				3C8F011320E6598B00022DF6 /* PinyinCharacterTableViewCell.xib in Resources */,
 				3CCBF19320DD027300056A8F /* LaunchScreen.storyboard in Resources */,
+				3C3B868C20F4D2F300D2DF47 /* lottie_chinese.json in Resources */,
 				3C8F011B20E65B4800022DF6 /* PinyinPhoneticTableViewCell.xib in Resources */,
 				3C8F010620E6370900022DF6 /* PinyinEnglishTableViewCell.xib in Resources */,
 				3CCBF19020DD027300056A8F /* Assets.xcassets in Resources */,
@@ -673,6 +689,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Material.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Motion.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxBlocking.framework",
@@ -684,6 +703,9 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Quick.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxTest.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Material.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Motion.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -943,7 +965,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "memtrip.swift-mvi";
+				PRODUCT_BUNDLE_IDENTIFIER = com.memtrip.pinyin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -964,7 +986,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "memtrip.swift-mvi";
+				PRODUCT_BUNDLE_IDENTIFIER = com.memtrip.pinyin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
