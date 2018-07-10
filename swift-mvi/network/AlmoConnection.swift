@@ -1,8 +1,8 @@
 import Foundation
 import Alamofire
 
-class AlmoConnection : Connection {
-    
+class AlmoConnection: Connection {
+
     func request(
         _ url: URLConvertible,
         method: HTTPMethod,

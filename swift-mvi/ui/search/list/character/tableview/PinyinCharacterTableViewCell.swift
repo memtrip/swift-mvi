@@ -1,5 +1,5 @@
 import UIKit
 
-class PinyinCharacterTableViewCell : UITableViewCell {
+class PinyinCharacterTableViewCell: UITableViewCell {
     @IBOutlet weak var chineseCharactersText: UILabel!
 }

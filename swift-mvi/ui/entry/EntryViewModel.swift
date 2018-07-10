@@ -1,56 +1,56 @@
 import Foundation
 import RxSwift
 
-class EntryViewModel : MxViewModel<EntryIntent, EntryResult, EntryViewState> {
-    
+class EntryViewModel: MxViewModel<EntryIntent, EntryResult, EntryViewState> {
+
     let countPinyin: CountPinyin
     let fetchAndSavePinyin: FetchAndSavePinyin
-    
+
     init (countPinyin: CountPinyin, fetchAndSavePinyin: FetchAndSavePinyin, initialState: EntryViewState) {
         self.countPinyin = countPinyin
         self.fetchAndSavePinyin = fetchAndSavePinyin
         super.init(initialState: initialState)
     }
-    
+
     private func fetch() -> Observable<EntryResult> {
-        
+
         return countPinyin
             .count()
             .flatMap { count in
                 if count > 0 {
-                    return Single.just(EntryResult.OnPinyinLoaded)
+                    return Single.just(EntryResult.pinyinLoaded)
                 } else {
                     return self.fetchAndSavePinyin
                         .save()
-                        .map { _ in EntryResult.OnPinyinLoaded }
+                        .map { _ in EntryResult.pinyinLoaded }
                 }
             }
-            .catchErrorJustReturn(EntryResult.GenericError)
+            .catchErrorJustReturn(EntryResult.error)
             .asObservable()
-            .startWith(EntryResult.InProgress)
+            .startWith(EntryResult.progress)
     }
-    
+
     override func dispatcher(intent: EntryIntent) -> Observable<EntryResult> {
         switch intent {
-        case .Idle:
-            return Observable.just(EntryResult.Idle)
-        case .Init:
+        case .idle:
+            return Observable.just(EntryResult.idle)
+        case .start:
             return fetch()
-        case .Retry:
+        case .retry:
             return fetch()
         }
     }
-    
+
     override func reducer(previousState: EntryViewState, result: EntryResult) -> EntryViewState {
         switch result {
-        case .Idle:
-            return EntryViewState.Idle
-        case .InProgress:
-            return EntryViewState.InProgress
-        case .OnPinyinLoaded:
-            return EntryViewState.OnPinyinLoaded
-        case .GenericError:
-            return EntryViewState.GenericError
+        case .idle:
+            return EntryViewState.idle
+        case .progress:
+            return EntryViewState.progress
+        case .pinyinLoaded:
+            return EntryViewState.pinyinLoaded
+        case .error:
+            return EntryViewState.error
         }
     }
 }

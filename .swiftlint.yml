@@ -1,0 +1,5 @@
+included:
+  - swift-mvi
+excluded:
+  - Carthage
+  - swift-mvi/media/SoundPlayer.swift

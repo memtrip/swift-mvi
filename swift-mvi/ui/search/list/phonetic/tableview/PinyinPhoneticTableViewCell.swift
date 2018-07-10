@@ -1,7 +1,6 @@
 import UIKit
 
-class PinyinPhoneticTableViewCell : UITableViewCell {
+class PinyinPhoneticTableViewCell: UITableViewCell {
 
     @IBOutlet weak var phoneticScriptText: UILabel!
 }
- 

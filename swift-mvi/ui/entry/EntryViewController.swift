@@ -9,7 +9,7 @@ class EntryViewController: MxViewController<EntryIntent, EntryResult, EntryViewS
     @IBOutlet weak var errorContainer: UIStackView!
     @IBOutlet weak var retryButton: UIButton!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-    
+
     lazy var animationView: LOTAnimationView = {
         let animationView = LOTAnimationView(name: "lottie_chinese")
         animationView.frame = lottieAnimationContainer.bounds
@@ -17,45 +17,45 @@ class EntryViewController: MxViewController<EntryIntent, EntryResult, EntryViewS
         lottieAnimationContainer.addSubview(animationView)
         return animationView
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        animationView.play { (finished) in
-            self.viewModel.publish(intent: EntryIntent.Init)
+
+        animationView.play { _ in
+            self.viewModel.publish(intent: EntryIntent.start)
         }
     }
-    
+
     override func intents() -> Observable<EntryIntent> {
         return Observable.merge(
-            retryButton.rx.tap.map { EntryIntent.Retry }
+            retryButton.rx.tap.map { EntryIntent.retry }
         )
     }
-    
+
     override func idleIntent() -> EntryIntent {
-        return EntryIntent.Idle
+        return EntryIntent.idle
     }
-    
-    override func render(state: EntryViewState) {        
+
+    override func render(state: EntryViewState) {
         switch state {
-        case .Idle:
+        case .idle:
             break
-        case EntryViewState.InProgress:
+        case EntryViewState.progress:
             errorContainer.gone()
             activityIndicatorView.visible()
-        case  EntryViewState.OnPinyinLoaded:
+        case  EntryViewState.pinyinLoaded:
             activityIndicatorView.gone()
             performSegue(withIdentifier: "entryToSearch", sender: self)
-        case EntryViewState.GenericError:
+        case EntryViewState.error:
             errorContainer.visible()
             activityIndicatorView.gone()
         }
     }
-    
+
     override func provideViewModel() -> EntryViewModel {
         return EntryViewModel(
             countPinyin: CountPinyinImpl(),
             fetchAndSavePinyin: FetchAndSavePinyinImpl(),
-            initialState: EntryViewState.InProgress)
+            initialState: EntryViewState.progress)
     }
 }

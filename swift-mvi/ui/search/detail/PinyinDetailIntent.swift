@@ -1,7 +1,7 @@
 import Foundation
 
-enum PinyinDetailIntent : MxIntent {
-    case Init
-    case PlayAudio
-    case Exit
+enum PinyinDetailIntent: MxIntent {
+    case start
+    case playAudio
+    case exit
 }

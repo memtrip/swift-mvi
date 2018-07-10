@@ -1,9 +1,9 @@
 import Foundation
 
 enum SearchPage {
-    case Phonetic
-    case English
-    case Character
-    
-    static let values = [Phonetic, English, Character]
+    case phonetic
+    case english
+    case character
+
+    static let values = [phonetic, english, character]
 }

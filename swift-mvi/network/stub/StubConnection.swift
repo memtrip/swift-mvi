@@ -1,8 +1,8 @@
 import Foundation
 import Alamofire
 
-class StubConnection : Connection {
-    
+class StubConnection: Connection {
+
     func request(
         _ url: URLConvertible,
         method: HTTPMethod,

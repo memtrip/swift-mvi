@@ -7,18 +7,20 @@ protocol PinyinApi {
 }
 
 class PinyinApiImpl: PinyinApi {
-    
+
     var headers: HTTPHeaders = [
         "Content-Type": "application/json",
         "Accept": "application/json",
-        "Accept-Language":"en-GB"
+        "Accept-Language": "en-GB"
     ]
-    
+
     func getDictionary() -> Single<HttpResponse<PinyinWrapperJson>> {
         return Http<PinyinWrapperJson, ErrorJson>().single(
-            url: ApiConfig.ENDPOINT + "/pinyin/",
-            method: .get,
-            headers: headers
+            httpRequest: HttpRequest(
+                url: ApiConfig.ENDPOINT + "/pinyin/",
+                method: .get,
+                headers: headers
+            )
         )
     }
 }

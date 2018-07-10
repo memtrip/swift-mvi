@@ -1,7 +1,7 @@
 import Foundation
 
-enum EntryIntent : MxIntent {
-    case Idle
-    case Init
-    case Retry
+enum EntryIntent: MxIntent {
+    case idle
+    case start
+    case retry
 }

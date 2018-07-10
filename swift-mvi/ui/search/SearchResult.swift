@@ -1,6 +1,6 @@
 import Foundation
 
-enum SearchResult : MxResult {
-case Idle
-    case ChangePage(hint: String, page: SearchPage)
+enum SearchResult: MxResult {
+    case idle
+    case page(hint: String, page: SearchPage)
 }

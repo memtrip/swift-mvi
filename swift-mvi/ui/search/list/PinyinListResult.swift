@@ -1,8 +1,8 @@
 import Foundation
 
 enum PinyinListResult: MxResult {
-    case Idle
-    case Populate(pinyinList: Array<Pinyin>)
-    case NavigateToDetails(pinyin: Pinyin)
-    case OnError
+    case idle
+    case populate(pinyinList: [Pinyin])
+    case navigateToDetails(pinyin: Pinyin)
+    case error
 }

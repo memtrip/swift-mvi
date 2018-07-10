@@ -30,19 +30,19 @@ class EntryViewModelSpec: QuickSpec {
                 let viewModel = EntryViewModel(
                     countPinyin: CountPinyinMock(),
                     fetchAndSavePinyin: FetchAndSavePinyinMock(),
-                    initialState: EntryViewState.Idle)
+                    initialState: EntryViewState.idle)
             
                 let scheduler = TestScheduler(initialClock: 0)
                 let results = scheduler.createObserver(EntryViewState.self)
                 
                 let _ = viewModel.states().subscribe(results)
-                viewModel.processIntents(intents: Observable.just(EntryIntent.Init))
+                viewModel.processIntents(intents: Observable.just(EntryIntent.init))
                 
                 scheduler.start()
                 
                 it("should show pinyin loaded") {
-                    expect(results.events[0].value.element).to(equal(EntryViewState.InProgress))
-                    expect(results.events[1].value.element).to(equal(EntryViewState.OnPinyinLoaded))
+                    expect(results.events[0].value.element).to(equal(EntryViewState.progress))
+                    expect(results.events[1].value.element).to(equal(EntryViewState.pinyinLoaded))
                 }
             }
         }
@@ -68,19 +68,19 @@ class EntryViewModelSpec: QuickSpec {
                 let viewModel = EntryViewModel(
                     countPinyin: CountPinyinMock(),
                     fetchAndSavePinyin: FetchAndSavePinyinMock(),
-                    initialState: EntryViewState.Idle)
+                    initialState: EntryViewState.idle)
                 
                 let scheduler = TestScheduler(initialClock: 0)
                 let results = scheduler.createObserver(EntryViewState.self)
                 
                 let _ = viewModel.states().subscribe(results)
-                viewModel.processIntents(intents: Observable.just(EntryIntent.Init))
+                viewModel.processIntents(intents: Observable.just(EntryIntent.init))
                 
                 scheduler.start()
                 
                 it("should show pinyin loaded") {
-                    expect(results.events[0].value.element).to(equal(EntryViewState.InProgress))
-                    expect(results.events[1].value.element).to(equal(EntryViewState.GenericError))
+                    expect(results.events[0].value.element).to(equal(EntryViewState.progress))
+                    expect(results.events[1].value.element).to(equal(EntryViewState.error))
                 }
             }
         }
@@ -104,19 +104,19 @@ class EntryViewModelSpec: QuickSpec {
                 let viewModel = EntryViewModel(
                     countPinyin: CountPinyinMock(),
                     fetchAndSavePinyin: FetchAndSavePinyinMock(),
-                    initialState: EntryViewState.Idle)
+                    initialState: EntryViewState.idle)
                 
                 let scheduler = TestScheduler(initialClock: 0)
                 let results = scheduler.createObserver(EntryViewState.self)
                 
                 let _ = viewModel.states().subscribe(results)
-                viewModel.processIntents(intents: Observable.just(EntryIntent.Init))
+                viewModel.processIntents(intents: Observable.just(EntryIntent.init))
                 
                 scheduler.start()
                 
                 it("should show pinyin loaded") {
-                    expect(results.events[0].value.element).to(equal(EntryViewState.InProgress))
-                    expect(results.events[1].value.element).to(equal(EntryViewState.OnPinyinLoaded))
+                    expect(results.events[0].value.element).to(equal(EntryViewState.progress))
+                    expect(results.events[1].value.element).to(equal(EntryViewState.pinyinLoaded))
                 }
             }
         }
@@ -142,19 +142,19 @@ class EntryViewModelSpec: QuickSpec {
                 let viewModel = EntryViewModel(
                     countPinyin: CountPinyinMock(),
                     fetchAndSavePinyin: FetchAndSavePinyinMock(),
-                    initialState: EntryViewState.Idle)
+                    initialState: EntryViewState.idle)
                 
                 let scheduler = TestScheduler(initialClock: 0)
                 let results = scheduler.createObserver(EntryViewState.self)
                 
                 let _ = viewModel.states().subscribe(results)
-                viewModel.processIntents(intents: Observable.just(EntryIntent.Init))
+                viewModel.processIntents(intents: Observable.just(EntryIntent.init))
                 
                 scheduler.start()
                 
                 it("should show pinyin loaded") {
-                    expect(results.events[0].value.element).to(equal(EntryViewState.InProgress))
-                    expect(results.events[1].value.element).to(equal(EntryViewState.GenericError))
+                    expect(results.events[0].value.element).to(equal(EntryViewState.progress))
+                    expect(results.events[1].value.element).to(equal(EntryViewState.error))
                 }
             }
         }

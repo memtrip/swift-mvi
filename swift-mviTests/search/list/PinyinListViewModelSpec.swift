@@ -36,12 +36,12 @@ class PinyinListViewModelSpec: QuickSpec {
                 let results = scheduler.createObserver(PinyinListViewState.self)
                 
                 let _ = viewModel.states().subscribe(results)
-                viewModel.processIntents(intents: Observable.just(PinyinListIntent.Search(terms: "寻找")))
+                viewModel.processIntents(intents: Observable.just(PinyinListIntent.search(terms: "寻找")))
                 
                 scheduler.start()
                 
                 it("should show pinyin search results") {
-                    expect(results.events[0].value.element == PinyinListViewState.Populate(pinyinList: expectedSearchResults)).to(beTrue())
+                    expect(results.events[0].value.element == PinyinListViewState.populate(pinyinList: expectedSearchResults)).to(beTrue())
                 }
             }
         }
@@ -71,12 +71,12 @@ class PinyinListViewModelSpec: QuickSpec {
                 let results = scheduler.createObserver(PinyinListViewState.self)
                 
                 let _ = viewModel.states().subscribe(results)
-                viewModel.processIntents(intents: Observable.just(PinyinListIntent.SelectItem(pinyin: expectedSearchResults[0])))
+                viewModel.processIntents(intents: Observable.just(PinyinListIntent.selectItem(pinyin: expectedSearchResults[0])))
                 
                 scheduler.start()
                 
                 it("should navigate to pinyin details") {
-                    expect(results.events[0].value.element == PinyinListViewState.NavigateToDetails(pinyin: expectedSearchResults[0])).to(beTrue())
+                    expect(results.events[0].value.element == PinyinListViewState.navigateToDetails(pinyin: expectedSearchResults[0])).to(beTrue())
                 }
             }
         }
@@ -100,12 +100,12 @@ class PinyinListViewModelSpec: QuickSpec {
                 let results = scheduler.createObserver(PinyinListViewState.self)
                 
                 let _ = viewModel.states().subscribe(results)
-                viewModel.processIntents(intents: Observable.just(PinyinListIntent.Search(terms: "寻找")))
+                viewModel.processIntents(intents: Observable.just(PinyinListIntent.search(terms: "寻找")))
                 
                 scheduler.start()
                 
                 it("should navigate to pinyin details") {
-                    expect(results.events[0].value.element == PinyinListViewState.OnError).to(beTrue())
+                    expect(results.events[0].value.element == PinyinListViewState.error).to(beTrue())
                 }
             }
         }

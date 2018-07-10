@@ -2,15 +2,17 @@ import Foundation
 import RxSwift
 import RealmSwift
 
-class CountPinyinImpl : CountPinyin {
-    
+class CountPinyinImpl: CountPinyin {
+
     func count() -> Single<Int> {
         return Single<Int>.create { single in
-            let realm = try! Realm()
-            let pinyin = realm.objects(Pinyin.self)
-            
-            single(.success(pinyin.count))
-            
+            if let realm = try? Realm() {
+                let pinyin = realm.objects(Pinyin.self)
+                single(.success(pinyin.count))
+            } else {
+                single(.error(ConnectionError()))
+            }
+
             return Disposables.create()
         }
     }

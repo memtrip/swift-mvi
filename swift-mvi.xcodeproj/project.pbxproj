@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0D73DA20F4F58B00727DB5 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D73D920F4F58B00727DB5 /* HttpRequest.swift */; };
+		3C0D73DC20F4F74500727DB5 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D73DB20F4F74500727DB5 /* ConnectionError.swift */; };
 		3C31542820E5891100C50950 /* Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C31542720E5891100C50950 /* Copy.swift */; };
 		3C3B868420F4904800D2DF47 /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B868220F4904800D2DF47 /* Motion.framework */; };
 		3C3B868520F4904800D2DF47 /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3B868320F4904800D2DF47 /* Material.framework */; };
@@ -113,6 +115,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C0D73D920F4F58B00727DB5 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		3C0D73DB20F4F74500727DB5 /* ConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionError.swift; sourceTree = "<group>"; };
 		3C31542720E5891100C50950 /* Copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copy.swift; sourceTree = "<group>"; };
 		3C3B868220F4904800D2DF47 /* Motion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Motion.framework; path = Carthage/Build/iOS/Motion.framework; sourceTree = "<group>"; };
 		3C3B868320F4904800D2DF47 /* Material.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Material.framework; path = Carthage/Build/iOS/Material.framework; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 			children = (
 				3C567B4720EFE1CB003D3A76 /* stub */,
 				3CC08B8120E2A4DF00C32823 /* RxHttp.swift */,
+				3C0D73D920F4F58B00727DB5 /* HttpRequest.swift */,
 				3CFC470120EFCF9100A47403 /* HttpErrorResponse.swift */,
 				3CC08B8520E2A8F400C32823 /* HttpResponse.swift */,
 				3C567B4320EFE07E003D3A76 /* Connection.swift */,
@@ -310,6 +315,7 @@
 		3C73011C20E3786400C139BA /* realm */ = {
 			isa = PBXGroup;
 			children = (
+				3C0D73DB20F4F74500727DB5 /* ConnectionError.swift */,
 				3CC08B9B20E2B25600C32823 /* Pinyin.swift */,
 				3C8F00F820E62C9000022DF6 /* SearchPinyin.swift */,
 				3C8F00FA20E62CD500022DF6 /* SavePinyin.swift */,
@@ -553,6 +559,7 @@
 				3CCBF18220DD027200056A8F /* Frameworks */,
 				3CCBF18320DD027200056A8F /* Resources */,
 				3CCBF1C120E0BB1100056A8F /* ShellScript */,
+				3C3391C520F4E83E00031866 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -674,6 +681,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3C3391C520F4E83E00031866 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		3CCBF1C120E0BB1100056A8F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -746,6 +766,7 @@
 				3C8F010F20E658F600022DF6 /* PinyinCharacterTableView.swift in Sources */,
 				3CC08B8620E2A8F400C32823 /* HttpResponse.swift in Sources */,
 				3C8EE07520E43CA80057D8B7 /* PinyinDetailViewState.swift in Sources */,
+				3C0D73DC20F4F74500727DB5 /* ConnectionError.swift in Sources */,
 				3CFC470420EFD8B200A47403 /* PinyinDetailsTableViewController.swift in Sources */,
 				3CCBF1CA20E0BD8E00056A8F /* MxResult.swift in Sources */,
 				3CAF731320E41E2200C63759 /* SearchViewState.swift in Sources */,
@@ -771,6 +792,7 @@
 				3C8F010D20E658E300022DF6 /* PinyinCharacterTableViewCell.swift in Sources */,
 				3C8EE07120E43C820057D8B7 /* PinyinDetailIntent.swift in Sources */,
 				3CCBF1C820E0BD7100056A8F /* MxIntent.swift in Sources */,
+				3C0D73DA20F4F58B00727DB5 /* HttpRequest.swift in Sources */,
 				3CBF3D9F20E42DF300F19354 /* PinyinListViewModel.swift in Sources */,
 				3CB8A9CD20EF734D00D32E61 /* SegueBundle.swift in Sources */,
 				3CBF3DA320E42E0D00F19354 /* PinyinListViewState.swift in Sources */,

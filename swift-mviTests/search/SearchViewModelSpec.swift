@@ -14,7 +14,7 @@ class SearchViewModelSpec: QuickSpec {
         describe("SearchViewModel") {
             
             let viewModel = SearchViewModel(
-                initialState: SearchViewState(hint: "", page: SearchPage.Phonetic))
+                initialState: SearchViewState(hint: "", page: SearchPage.phonetic))
             
             describe("selected with phonetic tab") {
                 
@@ -22,14 +22,14 @@ class SearchViewModelSpec: QuickSpec {
                 let results = scheduler.createObserver(SearchViewState.self)
                 
                 let _ = viewModel.states().subscribe(results)
-                viewModel.processIntents(intents: Observable.just(SearchIntent.SearchHint(page: SearchPage.Phonetic)))
+                viewModel.processIntents(intents: Observable.just(SearchIntent.searchHint(page: SearchPage.phonetic)))
                 
                 scheduler.start()
                 
                 it("should show pinyin loaded") {
                     expect(results.events[0].value.element == SearchViewState(
                         hint: "Search phonetic pinyin...",
-                        page: SearchPage.Phonetic)
+                        page: SearchPage.phonetic)
                     ).to(beTrue())
                 }
             }
@@ -38,7 +38,7 @@ class SearchViewModelSpec: QuickSpec {
         describe("SearchViewModel") {
             
             let viewModel = SearchViewModel(
-                initialState: SearchViewState(hint: "", page: SearchPage.Phonetic))
+                initialState: SearchViewState(hint: "", page: SearchPage.phonetic))
             
             describe("selected with english tab") {
                 
@@ -46,14 +46,14 @@ class SearchViewModelSpec: QuickSpec {
                 let results = scheduler.createObserver(SearchViewState.self)
                 
                 let _ = viewModel.states().subscribe(results)
-                viewModel.processIntents(intents: Observable.just(SearchIntent.SearchHint(page: SearchPage.English)))
+                viewModel.processIntents(intents: Observable.just(SearchIntent.searchHint(page: SearchPage.English)))
                 
                 scheduler.start()
                 
                 it("should show pinyin loaded") {
                     expect(results.events[0].value.element == SearchViewState(
                         hint: "Search english translations...",
-                        page: SearchPage.English)
+                        page: SearchPage.english)
                     ).to(beTrue())
                 }
             }
@@ -62,7 +62,7 @@ class SearchViewModelSpec: QuickSpec {
         describe("SearchViewModel") {
             
             let viewModel = SearchViewModel(
-                initialState: SearchViewState(hint: "", page: SearchPage.Phonetic))
+                initialState: SearchViewState(hint: "", page: SearchPage.phonetic))
             
             describe("selected with character tab") {
                 
@@ -70,14 +70,14 @@ class SearchViewModelSpec: QuickSpec {
                 let results = scheduler.createObserver(SearchViewState.self)
                 
                 let _ = viewModel.states().subscribe(results)
-                viewModel.processIntents(intents: Observable.just(SearchIntent.SearchHint(page: SearchPage.Character)))
+                viewModel.processIntents(intents: Observable.just(SearchIntent.searchHint(page: SearchPage.Character)))
                 
                 scheduler.start()
                 
                 it("should show pinyin loaded") {
                     expect(results.events[0].value.element == SearchViewState(
                         hint: "寻找汉语词典",
-                        page: SearchPage.Character)
+                        page: SearchPage.character)
                     ).to(beTrue())
                 }
             }

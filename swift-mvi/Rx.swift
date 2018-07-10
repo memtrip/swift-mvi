@@ -15,7 +15,6 @@ extension ConnectableObservableType {
                 case .completed:
                     observer.on(.completed)
                 }
-                
             }
         }
     }

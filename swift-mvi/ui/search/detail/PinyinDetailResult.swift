@@ -1,7 +1,7 @@
 import Foundation
 
-enum PinyinDetailResult : MxResult {
-    case Init
-    case PlayAudio
-    case Exit
+enum PinyinDetailResult: MxResult {
+    case start
+    case playAudio
+    case exit
 }

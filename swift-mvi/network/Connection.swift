@@ -11,7 +11,7 @@ protocol Connection {
 }
 
 class ConnectionFactory {
-    
+
     func create() -> Connection {
         return AlmoConnection()
     }

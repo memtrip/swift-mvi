@@ -1,19 +1,19 @@
 import Foundation
 
-struct PinyinDetailViewState : MxViewState, Copy, Equatable {
+struct PinyinDetailViewState: MxViewState, Copy, Equatable {
     var phoneticScriptText: String
     var englishTranslationText: String
     var chineseCharacters: String
     var audioSrc: String
     var action: Action
-    
+
     enum Action {
-        case None
-        case PlayAudio(url: String)
-        case Back
+        case none
+        case playAudio(url: String)
+        case back
     }
-    
-    static func ==(lhs: PinyinDetailViewState, rhs: PinyinDetailViewState) -> Bool {
+
+    static func == (lhs: PinyinDetailViewState, rhs: PinyinDetailViewState) -> Bool {
         return lhs.phoneticScriptText == rhs.phoneticScriptText
             && lhs.englishTranslationText == rhs.englishTranslationText
             && lhs.chineseCharacters == rhs.chineseCharacters
@@ -22,14 +22,14 @@ struct PinyinDetailViewState : MxViewState, Copy, Equatable {
 }
 
 extension PinyinDetailViewState.Action: Equatable {
-    
-    static func ==(lhs: PinyinDetailViewState.Action, rhs: PinyinDetailViewState.Action) -> Bool {
+
+    static func == (lhs: PinyinDetailViewState.Action, rhs: PinyinDetailViewState.Action) -> Bool {
         switch (lhs, rhs) {
-        case (let .PlayAudio(url1), let .PlayAudio(url2)):
+        case (let .playAudio(url1), let .playAudio(url2)):
             return url1 == url2
-        case (.None, .None):
+        case (.none, .none):
             return true
-        case (.Back, .Back):
+        case (.back, .back):
             return true
         default:
             return false

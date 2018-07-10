@@ -19,7 +19,7 @@ class PinyinDetailViewModelSpec: QuickSpec {
                     englishTranslationText: "pinyin",
                     chineseCharacters: "寻找",
                     audioSrc: "",
-                    action: PinyinDetailViewState.Action.None))
+                    action: PinyinDetailViewState.Action.none))
             
             describe("init") {
                 
@@ -27,7 +27,7 @@ class PinyinDetailViewModelSpec: QuickSpec {
                 let results = scheduler.createObserver(PinyinDetailViewState.self)
                 
                 let _ = viewModel.states().subscribe(results)
-                viewModel.processIntents(intents: Observable.just(PinyinDetailIntent.Init))
+                viewModel.processIntents(intents: Observable.just(PinyinDetailIntent.start))
                 
                 scheduler.start()
                 
@@ -37,7 +37,7 @@ class PinyinDetailViewModelSpec: QuickSpec {
                         englishTranslationText: "pinyin",
                         chineseCharacters: "寻找",
                         audioSrc: "",
-                        action: PinyinDetailViewState.Action.None)))
+                        action: PinyinDetailViewState.Action.none)))
                 }
             }
         }
@@ -50,7 +50,7 @@ class PinyinDetailViewModelSpec: QuickSpec {
                     englishTranslationText: "pinyin",
                     chineseCharacters: "寻找",
                     audioSrc: "ipfs://audio",
-                    action: PinyinDetailViewState.Action.None))
+                    action: PinyinDetailViewState.Action.none))
             
             describe("playAudio") {
                 
@@ -58,7 +58,7 @@ class PinyinDetailViewModelSpec: QuickSpec {
                 let results = scheduler.createObserver(PinyinDetailViewState.self)
                 
                 let _ = viewModel.states().subscribe(results)
-                viewModel.processIntents(intents: Observable.just(PinyinDetailIntent.PlayAudio))
+                viewModel.processIntents(intents: Observable.just(PinyinDetailIntent.playAudio))
                 
                 scheduler.start()
                 
@@ -68,9 +68,9 @@ class PinyinDetailViewModelSpec: QuickSpec {
                         englishTranslationText: "pinyin",
                         chineseCharacters: "寻找",
                         audioSrc: "ipfs://audio",
-                        action: PinyinDetailViewState.Action.PlayAudio(url: "ipfs://audio"))))
+                        action: PinyinDetailViewState.Action.playAudio(url: "ipfs://audio"))))
                     
-                    expect(results.events[0].value.element!.action == PinyinDetailViewState.Action.PlayAudio(url: "ipfs://audio")).to(beTrue())
+                    expect(results.events[0].value.element!.action == PinyinDetailViewState.Action.playAudio(url: "ipfs://audio")).to(beTrue())
                 }
             }
         }

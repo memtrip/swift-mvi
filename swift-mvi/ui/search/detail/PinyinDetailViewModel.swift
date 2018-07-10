@@ -1,30 +1,30 @@
 import Foundation
 import RxSwift
 
-class PinyinDetailViewModel : MxViewModel<PinyinDetailIntent, PinyinDetailResult, PinyinDetailViewState> {
-    
+class PinyinDetailViewModel: MxViewModel<PinyinDetailIntent, PinyinDetailResult, PinyinDetailViewState> {
+
     override func dispatcher(intent: PinyinDetailIntent) -> Observable<PinyinDetailResult> {
         switch intent {
-        case .Init:
-            return Observable.just(PinyinDetailResult.Init)
-        case .PlayAudio:
-            return Observable.just(PinyinDetailResult.PlayAudio)
-        case .Exit:
-            return Observable.just(PinyinDetailResult.Exit)
+        case .start:
+            return Observable.just(PinyinDetailResult.start)
+        case .playAudio:
+            return Observable.just(PinyinDetailResult.playAudio)
+        case .exit:
+            return Observable.just(PinyinDetailResult.exit)
         }
     }
-    
+
     override func reducer(previousState: PinyinDetailViewState, result: PinyinDetailResult) -> PinyinDetailViewState {
         switch result {
-        case .Init:
+        case .start:
             return previousState
-        case .PlayAudio:
-            return previousState.copy(copy: {
-                copy in copy.action = PinyinDetailViewState.Action.PlayAudio(url: previousState.audioSrc)
+        case .playAudio:
+            return previousState.copy(copy: { copy in
+                copy.action = PinyinDetailViewState.Action.playAudio(url: previousState.audioSrc)
             })
-        case .Exit:
-            return previousState.copy(copy: {
-                copy in copy.action = PinyinDetailViewState.Action.Back
+        case .exit:
+            return previousState.copy(copy: { copy in
+                copy.action = PinyinDetailViewState.Action.back
             })
         }
     }
